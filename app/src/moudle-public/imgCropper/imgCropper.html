@@ -1,0 +1,12 @@
+<div class="cropperWrap">
+    <header class="mui-bar orange white" id="header">
+        <span class="mui-action-back iconfont icon-close mui-pull-left"></span>
+        <h1 class="mui-title">图像裁切</h1>
+        <button class="mui-btn mui-btn-link mui-pull-right" @tap.stop.prevent="save">确定</button>
+    </header>
+    <div class="mui-content" id="content">
+        <div :class="{cropperWrap:isCropperWrap}">
+            <img id="image" @load.stop.prevent="imgLoad" :src="imgUrl">
+        </div>
+    </div>
+</div>

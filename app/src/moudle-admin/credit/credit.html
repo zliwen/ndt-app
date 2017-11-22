@@ -1,0 +1,46 @@
+<section id="creditQuery">
+    <header class="navBar mui-bar mui-bar-transparent">
+        <span class="mui-action-back iconfont icon-back mui-pull-left"></span>
+        <h1 class="mui-title">信用</h1>
+    </header>
+    <section class="creditheader">
+        <div class="circle">
+            <div class="circleWrap circlemoving" :style="{backgroundImage:'url(assets/images/ndt/credit_circle2.png)'}">
+                <div class="dot" :style="{backgroundImage:'url(assets/images/ndt/credit_dot.png)'}"></div>
+            </div>
+            <div class="circleDot" :style="{backgroundImage:'url(assets/images/ndt/credit_circle1.png)'}">
+                <h3 id="numberAnimate">0</h3>
+                <span>我的信用分</span>
+            </div>
+        </div>
+        <div class="wave wavemoving" style="background-image:url(assets/images/ndt/wave.png)"></div>
+    </section>
+    <div class="desc">
+        <div class="item">
+            <i class="scoreLevel" :style="{backgroundImage:'url(assets/images/ndt/credit_icon_level5@3x.png)'}"></i>
+            <span>我的等级：优秀</span>
+        </div>
+        <div class="item" @tap.stop.prevent="toCreditAbout('creditAbout')">
+            <i style="background-image:url(assets/images/ndt/credit_btn_what@3x.png)"></i>
+            <span class="about">了解信用分</span>
+        </div>
+    </div>
+    <div class="taskList">
+        <div class="taskDesc">
+            <span><i class="iconfont icon-yinhaoshang"></i>  任务闯关，提升等级，贷款更容易  <i class="iconfont icon-yinhao"></i></span><br>
+            <span>请如实填写信息，否则会影响本人的真实信用分</span>
+        </div>
+        <ul class="tasks">
+            <li class="item" v-for="item in taskList" @tap.stop.prevent="openPage(item.page,{taskId:item.id,state:item.state})" :style="{'background':'linear-gradient(to bottom, '+item.color.top+', '+item.color.bottom+')'}">
+                <i class="icon" :style="{backgroundImage:'url(assets/images/ndt/'+item.icon+')'}"></i>
+                <div class="info">
+                    <h3>{{item.name}}</h3>
+                    <p>{{item.toLink}}</p>
+                </div>
+                <i class="taskStatus done" v-if="item.state===true" :style="{backgroundImage:'url(assets/images/ndt/credit_icon_compelet@3x.png)'}"></i>
+                <i class="taskStatus undone" v-if="item.state===false" :style="{backgroundImage:'url(assets/images/ndt/credit_btn_next@3x.png)'}"></i>
+            </li>
+        </ul>
+    </div>
+    <img class="methods mui-hidden" :src="'assets/images/ndt/credit_bg_up02@3x.png'" alt="如何提升信用分">
+</section>

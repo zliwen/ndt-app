@@ -1,0 +1,142 @@
+@import "../../common/scss/reset";
+#creditQuery {
+    .searchForm {
+        width: 100%;
+        padding: .2rem;
+        height: 1.2rem;
+        position: relative;
+        margin: 0 auto;
+        transform: translate3d(0, 3rem, 0);
+        -webkit-transform: translate3d(0, 3rem, 0);
+        transition: transform .3s;
+        -webkit-transition: transform .3s;
+        input {
+            width: 100%;
+            height: .8rem;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0 1.5rem 0 .2rem;
+            border: 0;
+            border-radius: 0;
+            font-size: .3rem;
+            text-align: left;
+            box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
+            &::-webkit-input-placeholder {
+                color: #b9b9b9;
+                font-size: .28rem;
+                text-align: center;
+            }
+        }
+        .searchBtn {
+            height: .8rem;
+            line-height: .8rem;
+            background-color: #ff6600;
+            color: #ffffff;
+            width: 1.5rem;
+            text-align: center;
+            font-size: .3rem;
+            position: absolute;
+            right: .2rem;
+            top: .2rem;
+            bottom: .2rem;
+            box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
+        }
+        &.focus {
+            transform: translate3d(0, 0, 0);
+            -webkit-transform: translate3d(0, 0, 0);
+            position: fixed;
+            background: #fff;
+            z-index: 1;
+            box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
+        }
+    }
+    .searchList {
+        padding-top: 1.4rem;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                padding: 0;
+                margin: 0 auto .2rem;
+                background-color: #ffffff;
+                border: solid .01rem #E7E7E7;
+                border-radius: .06rem;
+                width: 7rem;
+                header {
+                    height: 1.24rem;
+                    display: flex;
+                    position: relative;
+                    .logo {
+                        height: 1.24rem;
+                        width: 1.24rem;
+                        line-height: 1.24rem;
+                        text-align: center;
+                        background-color: #ff6600;
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        i {
+                            font-size: .6rem;
+                            color: #ffffff;
+                        }
+                    }
+                    h3 {
+                        flex: 1;
+                        font-size: .36rem;
+                        color: #333333;
+                        margin: .2rem .25rem;
+                        line-height: .42rem;
+                        width: 100%;
+                    }
+                    span {
+                        display: block;
+                        position: absolute;
+                        width: .7rem;
+                        height: .34rem;
+                        border-radius: .17rem;
+                        border: solid .01rem #ff6600;
+                        font-size: .24rem;
+                        line-height: .34rem;
+                        text-align: center;
+                        right: .3rem;
+                        bottom: .2rem;
+                        color: #ff6600;
+                        background-color: #ffffff;
+                    }
+                }
+                article {
+                    padding: .15rem .3rem;
+                    overflow: hidden;
+                    border-top: solid .01rem #E7E7E7;
+                    .item {
+                        color: #666666;
+                        font-size: .28rem;
+                        line-height: .4rem;
+                        height: .4rem;
+                        margin: .05rem 0;
+                        overflow: hidden;
+                        display: flex;
+                        justify-content: space-between;
+                        label {
+                            float: left;
+                            color: #666666;
+                            font-size: .28rem;
+                            margin: 0;
+                            padding: 0;
+                            min-width: 2rem;
+                        }
+                        p {
+                            margin: 0;
+                            padding: 0;
+                            color: #666666;
+                            font-size: .28rem;
+                            float: right;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

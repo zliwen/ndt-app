@@ -1,0 +1,17 @@
+@import "../../common/scss/reset";
+@import "../../../../node_modules/cropperjs/dist/cropper.css";
+
+/* Limit image width to avoid overflow the container */
+
+html {
+    height: 100%;
+}
+
+.cropperWrap {
+    height: 100%;
+    padding-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+}

@@ -1,0 +1,37 @@
+@import "../../common/scss/reset";
+#newDetail {
+    .articleTitle {
+        background-color: #ffffff;
+        margin-bottom: .2rem;
+        overflow: hidden;
+        h3 {
+            margin: 0;
+            padding: .20rem .3rem;
+            line-height: .48rem;
+            color: #333333;
+            font-size: .34rem;
+        }
+        span {
+            font-size: .26rem;
+            color: #999;
+            line-height: .28rem;
+            display: block;
+            padding: 0 .3rem .3rem;
+        }
+    }
+    .articleContent {
+        background-color: #ffffff;
+        padding: .3rem;
+        color: #333333;
+        font-size: .32rem;
+        line-height: .46rem;
+        p {
+            color: #333333;
+            font-size: .32rem;
+        }
+        img {
+            max-width: 100% !important;
+            display: block;
+        }
+    }
+}

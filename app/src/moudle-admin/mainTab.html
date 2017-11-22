@@ -1,0 +1,10 @@
+<nav class="mui-bar mui-bar-tab" :style="{top: navTop, height: height}">
+    <a class="mui-tab-item" :class="[page.url===activeTab?'mui-active':'']" v-for="page in subpages" @tap.stop.prevent="tabClick(page)" :href="page.url">
+        <!-- <span class="mui-icon" :class="page.icon"><span class="mui-badge" v-if="page.badge">{{page.badge}}</span></span> -->
+        <span class="mui-icon">
+            <img :src="page.url===activeTab?page.src:page.nosrc" :alt="page.name">                       
+            <span class="mui-badge" v-if="page.badge">{{page.badge}}</span>
+        </span>
+        <span class="mui-tab-label">{{page.name}}</span>
+    </a>
+</nav>

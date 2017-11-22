@@ -1,0 +1,44 @@
+<section class="userInfo">
+    <header class="mui-bar orange white">
+        <span class="mui-action-back iconfont icon-close mui-pull-left"></span>
+        <h1 class="mui-title">用户资料</h1>
+    </header>
+    <section class="mui-content">
+        <div class="desc"><span>*</span> 完善的个人信息有助于提升自己的信用分，贷款申请会更容易通过；农贷通承诺保护用户信息安全，未经授权不会对外提供。</div>
+        <div class="userProfile">
+            <div class="infoItem" v-if="phoneAuth" @tap="openPage('phoneAuth', {taskId:phoneAuth.id,state:phoneAuth.state,style:'dark'})">
+                <label class="name">手机认证</label>
+                <span class="value" v-if="!phoneAuth.state">未认证 <i class="mui-icon mui-icon-arrowright"></i></span>
+                <span class="value" v-else><b class="blink">更换</b> {{replaceNum(loginName,3,4)}}  <i class="mui-icon mui-icon-arrowright"></i></span>
+            </div>
+            <div class="infoItem" v-if="realAuth" @tap="openPage('realAuth', {taskId:realAuth.id,state:realAuth.state,style:'dark'})">
+                <label class="name">实名认证</label>
+                <span class="value" v-if="!realAuth.state">未认证 <i class="mui-icon mui-icon-arrowright"></i></span>
+                <p class="value" v-else><span>{{replaceNum(name,1,1)}}<br>{{replaceNum(identityId,5,4)}} </span> <i class="mui-icon mui-icon-arrowright"></i></p>
+            </div>
+        </div>
+        <br>
+        <div class="userProfile">
+            <div class="infoItem" v-if="userType===202" @tap="openPage('userInfo',{style:'dark'})">
+                <label class="name">身份信息</label>
+                <span class="value"><i class="mui-icon mui-icon-arrowright"></i></span>
+            </div>
+            <div class="infoItem" v-if="userType===203" @tap="openPage('companyInfo')">
+                <label class="name">企业基础信息</label>
+                <span class="value"><i class="mui-icon mui-icon-arrowright"></i></span>
+            </div>
+            <div class="infoItem mui-hidden">
+                <label class="name">生产资料信息</label>
+                <span class="value"><i class="mui-icon mui-icon-arrowright"></i></span>
+            </div>
+            <div class="infoItem mui-hidden">
+                <label class="name">用工信息</label>
+                <span class="value"><i class="mui-icon mui-icon-arrowright"></i></span>
+            </div>
+            <div class="infoItem mui-hidden">
+                <label class="name">水电气缴费信息</label>
+                <span class="value"><i class="mui-icon mui-icon-arrowright"></i></span>
+            </div>
+        </div>
+    </section>
+</section>

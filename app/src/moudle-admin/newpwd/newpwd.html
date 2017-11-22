@@ -1,0 +1,17 @@
+<section class="login">
+    <header class="mui-bar orange white">
+        <span class="mui-action-back iconfont icon-close mui-pull-left"></span>
+        <h1 class="mui-title">忘记密码</h1>
+    </header>
+    <section class="mui-content">
+    	<form class="loginForm">
+            <div class="item">
+                <input type="password" name="" id="phone" v-model="password" placeholder="请输入新密码">
+            </div>
+            <div class="item">
+                <input type="password" name="" id="aphone" v-model="repeatPwd" placeholder="确认新密码">
+            </div>
+            <a href="javascript:;" @tap.stop.prevent="finish" class="registerBtn btn block">确 认</a>
+        </form>
+    </section>
+</section>

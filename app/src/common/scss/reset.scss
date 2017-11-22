@@ -1,0 +1,247 @@
+$bg: #f3f3f3;
+$white: #fff;
+$titleFontColor: #5A5A5A;
+$iconColor: #6a80a1;
+.ui-page-login,
+body,
+html {
+    background: $bg;
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+.mui-content {
+    background: $bg;
+}
+
+.mui-pull-bottom-tips {
+    text-align: center;
+    padding: .15rem 0;
+    color: #999999;
+}
+
+.loadStatus {
+    width: 100%;
+    clear: both;
+    line-height: .3rem;
+    text-align: center;
+    font-size: .28rem;
+    color: #999999;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: none;
+    background-color: transparent;
+    vertical-align: middle;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    &:after {
+        padding: 0 .1rem;
+    }
+    &.noData {
+        display: flex;
+        .mui-spinner {
+            display: none;
+        }
+        &:after {
+            content: "没有更多数据了..."
+        }
+    }
+    &.loading {
+        display: flex;
+        &:after {
+            content: "正在加载中..."
+        }
+    }
+}
+
+#verifyCodeBtn {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    width: 31%;
+    height: 30px;
+    line-height: 20px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.mui-switch {
+    border: solid 1px #e5e5e5;
+    padding: 1px;
+}
+
+a {
+    color: #4a90e2;
+}
+
+// 重写选择器样式
+.mui-dtpicker,
+.mui-poppicker {
+    box-shadow: none !important;
+    border-top: 0 none;
+    .mui-btn {
+        border: 0 none;
+        &.mui-btn-blue {
+            background-color: #ff6600;
+        }
+    }
+    .mui-pciker-list li.highlight {
+        color: #ff6600;
+    }
+}
+
+.mui-popup-button {
+    color: #ff6600 !important;
+}
+
+.applicationBtn {
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    height: .9rem;
+    line-height: .9rem;
+    background-color: #ff6600;
+    font-size: .36rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.mui-bar.orange {
+    height: .9rem;
+    width: 100%;
+    overflow: hidden;
+    line-height: .9rem;
+    background: -webkit-linear-gradient(left, #ff8e33, #ff6521);
+    background: linear-gradient(to right, #ff8e33, #ff6521);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .12);
+    .mui-title {
+        margin: 0 auto;
+        text-align: center;
+        width: 3rem;
+        height: .9rem;
+        line-height: .9rem;
+        font-size: .38rem;
+        color: #fff;
+        vertical-align: middle;
+    }
+    span.iconfont {
+        height: .9rem;
+        width: .7rem;
+        text-align: center;
+        line-height: .9rem;
+        color: #fff;
+        font-size: .52rem;
+        display: block;
+        &:active {
+            color: #fbfbfb;
+        }
+    }
+    .mui-btn-link {
+        color: #ffffff;
+    }
+    &~.mui-content {
+        padding-top: .9rem; // padding-top: 1.3rem !important;
+    }
+    &.white {
+        background: #ffffff;
+        color: #333333;
+        .mui-title,
+        span.iconfont,
+        .mui-btn-link {
+            color: #333333;
+        }
+    }
+}
+
+.mui-bar .mui-icon {
+    color: $iconColor !important;
+}
+
+.mui-icon.mui-pull-left span,
+.mui-icon.mui-pull-right span {
+    font-size: 16px;
+}
+
+.mui-bar .mui-title {
+    color: #5A5A5A;
+    font-size: 1.9rem;
+}
+
+.mui-bar-nav {
+    background: #fff !important;
+    box-shadow: none !important;
+}
+
+.mui-bar .mui-btn-link {
+    color: #4a90e2;
+}
+
+.mui-bar-nav:after {
+    position: absolute;
+    content: ' ';
+    height: 1px;
+    width: 100%;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    background: #E5E5E5;
+}
+
+.mui-content {
+    height: 100%;
+    background: #f3f3f3 !important;
+}
+
+.mui-btn-primary {
+    border: 0 none !important;
+    background: #4a90e2 !important;
+}
+
+.mui-input-row {
+    height: 45px !important;
+}
+
+.mui-input-row label {
+    height: 45px;
+    padding: 14px 15px !important;
+}
+
+.mui-input-row input {
+    height: 45px;
+}
+
+.mui-input-row:last-child:after {
+    display: none;
+}
+
+.mui-icon-clear {
+    top: 12px !important;
+}
+
+.mui-input-group:after,
+.mui-table-view:after,
+.mui-table-view-cell:after {
+    background-color: #E5E5E5 !important;
+}
+
+.mui-input-group:before,
+.mui-table-view:before,
+.mui-table-view-cell:before {
+    background-color: #E5E5E5 !important;
+}
+
+.mui-input-group .mui-input-row:after {
+    background-color: #E5E5E5 !important;
+}
+
+.mui-backdrop {
+    background-color: rgba(0, 0, 0, .2);
+}

@@ -1,0 +1,55 @@
+<section id="apply">
+    <header class="mui-bar orange">
+        <span class="mui-action-back iconfont icon-back mui-pull-left"></span>
+        <h1 class="mui-title">申请贷款</h1>
+    </header>
+    <section class="mui-content">
+        <div class="applyInfo">
+            <div class="status">你正在申请的贷款服务</div>
+            <h3 class="title" v-if="detail">{{detail.name}}</h3>
+            <div class="cardInfo" v-if="userInfo">
+                <p v-if="userInfo.name"><span class="name">申请主体</span><span class="value">{{userInfo.name}}</span></p>
+                <p v-if="userInfo.code"><span class="name">统一社会信用代码</span><span class="value">{{userInfo.code}}</span></p>
+                <p v-if="userInfo.legalPerson"><span class="name">企业法人</span><span class="value">{{userInfo.legalPerson}}</span></p>
+                <p v-if="userInfo.identityId"><span class="name">身份证</span><span class="value">{{replaceNum(userInfo.identityId,6,4)}}</span></p>
+                <p v-if="userInfo.legalPersonIdentityId"><span class="name">法人身份证</span><span class="value">{{replaceNum(userInfo.legalPersonIdentityId,6,4)}}</span></p>
+                <p v-if="division"><span class="name">地址</span><span class="value address">{{division}}</span></p>
+                <p v-if="userInfo.mobile"><span class="name">联系电话</span><span class="value">{{replaceNum(userInfo.mobile,3,4)}}</span></p>
+                <p v-if="userInfo.bindTelephone"><span class="name">联系电话</span><span class="value">{{replaceNum(userInfo.bindTelephone,3,4)}}</span></p>
+            </div>
+        </div>
+        <dl class="applyForm">
+            <dt>你想要贷款的金额：</dt>
+            <dd>
+                <input class="sum" type="tel" v-model="applyInfo.applyAmount" placeholder="贷款金额">
+                <!-- <input class="sum" type="tel" v-model="applyInfo.applyAmount" :placeholder="detail.mixAmount+' - '+detail.maxAmount"> -->
+                <span class="pawn mui-disabled" @tap.stop.prevent="showPicker('sumUnitPicker')">（{{applyInfo.applyAmountUnitName || "单位"}}）</span> <i class="iconfont icon-appl_btn_scroll mui-hidden" @tap.stop.prevent="showPicker('sumUnitPicker')"></i>
+            </dd>
+            <dt>请选择贷款期限：</dt>
+            <dd>
+                <input class="sum" type="tel" v-model="applyInfo.applyTerm" placeholder="贷款期限">
+                <!-- <input class="sum" type="tel" v-model="applyInfo.applyTerm" :placeholder="detail.mixTerm+' - '+detail.maxTerm"> -->
+                <span class="pawn mui-disabled" @tap.stop.prevent="showPicker('dateUnitPicker')">（{{applyInfo.applyTermUnitName || "单位"}}）</span> <i class="iconfont icon-appl_btn_scroll mui-hidden" @tap.stop.prevent="showPicker('dateUnitPicker')"></i>
+            </dd>
+            <dt>请选择贷款方式：</dt>
+            <dd>
+                <ul class="loanType">
+                    <li v-for="item in loanType" :class="{active: selectType.indexOf(item.id)>=0}" @tap="handelSelect(item.id)"><span class="iconfont icon-active"></span> {{item.value}}</li>
+                </ul>
+            </dd>
+            <dt>请选择贷款用途：</dt>
+            <dd><span class="pawn" @tap.stop.prevent="showPicker('industryPicker')">{{applyInfo.applyPurposeName || "选择贷款用途"}}</span> <i class="iconfont icon-appl_btn_scroll" @tap.stop.prevent="showPicker('industryPicker')"></i></dd>
+            <dt>请填写抵押物名称：</dt>
+            <dd>
+                <input class="context" v-model="applyInfo.guaranteeName" type="text" placeholder="抵押物名称">
+            </dd>
+            <dt>请填写抵押物描述：</dt>
+            <dd>
+                <textarea class="desc" rows="" cols="" v-model="applyInfo.guaranteeRemark" placeholder="填写抵押物描述，不超过140字"></textarea>
+            </dd>
+        </dl>
+        <div class="applicationBtn" @tap.stop.prevent="submit" id="applyBtn">
+            提交申请
+        </div>
+    </section>
+</section>

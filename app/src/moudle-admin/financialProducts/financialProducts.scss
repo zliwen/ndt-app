@@ -1,0 +1,110 @@
+@import "../../common/scss/reset";
+@import "../../common/scss/product";
+html,
+body {
+    height: 100%;
+}
+
+#products {
+    height: 100%;
+    .banner {
+        height: 2.2rem;
+        width: 100%;
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+    .productsList {
+        height: calc(100% - 2.2rem);
+        position: relative;
+        .toolBar {
+            height: .9rem;
+            line-height: .9rem;
+            font-size: 0.34rem;
+            padding: 0 .33rem;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            &:after {
+                content: " ";
+                position: absolute;
+                top: .9rem;
+                height: 1px;
+                background-color: #efefef;
+                width: 100%;
+                left: 0;
+                right: 0;
+                z-index: 5;
+            }
+            .sort {
+                color: #FF762B;
+                i {
+                    font-size: .1rem;
+                    line-height: .9rem;
+                    vertical-align: middle;
+                }
+                vertical-align: middle;
+            }
+            .filter {
+                color: #999999;
+            }
+        }
+        .orderList {
+            position: absolute;
+            list-style: none;
+            padding: .2rem 0;
+            margin: 0;
+            top: .9rem;
+            left: 0;
+            right: 0;
+            background-color: #ffffff;
+            z-index: 4;
+            li {
+                font-size: .32rem;
+                padding: 0;
+                margin: 0;
+                height: .95rem;
+                line-height: .95rem;
+                color: #999999;
+                padding: 0 .33rem;
+                display: flex;
+                justify-content: space-between;
+                &.active {
+                    color: #FF762B;
+                }
+            }
+        }
+        .list {
+            height: calc(100% - .9rem);
+            position: relative;
+            font-size: .28rem;
+            background-color: #ffffff;
+            .mask {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, .6);
+                z-index: 3;
+            }
+            .mui-table-view {
+                background: #f2f2f2;
+                overflow: hidden;
+                .mui-table-view-cell {
+                    padding: 0;
+                    margin-bottom: 0.16rem;
+                    background: #fff;
+                    &:after {
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mui-backdrop {
+    background-color: rgba(0, 0, 0, .6);
+}

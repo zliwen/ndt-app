@@ -1,0 +1,71 @@
+<section id="news">
+    <header class="mui-bar orange">
+        <span class="mui-action-back iconfont icon-back mui-pull-left mui-hidden"></span>
+        <h1 class="mui-title">资讯</h1>
+        <button class="mui-btn mui-btn-link mui-pull-right mui-hidden"></button>
+    </header>
+    <section class="mui-content">
+        <net-status :reload="reload" :loading="loading" :no-data="!loading && !navList.length"></net-status>
+        <div id="slider" class="mui-slider" v-if="!loading && navList.length">
+            <div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                <div class="mui-scroll">
+                    <a class="mui-control-item mui-active" href="#policy">政策</a>
+                    <a class="mui-control-item" href="#ndtPolicy">农贷通政策</a>
+                    <a class="mui-control-item" v-for="(item, index) in navList" v-if="item.value !== '新闻'" :href="'#slider-'+item.id">{{item.value}}</a>
+                </div>
+            </div>
+            <div class="mui-slider-group">
+                <div id="policy" class="mui-slider-item mui-control-content mui-active">
+                    <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll" id="scroll-policy">
+                            <div class="itemWrap">
+                                <div class="newsItem" @tap.stop.prevent="showPage('newDetail',subitem,'policy')" v-for="subitem in policyList.list">
+                                    <div class="avatar" v-if="subitem.linkImageUrl">
+                                        <img :src="logo(subitem.linkImageUrl)" alt="" onerror="javascript:this.remove();">
+                                    </div>
+                                    <h3>{{subitem.title}}</h3>
+                                    <span>{{subitem.updateByName || '农贷通'}} · {{subitem.updateAt.substr(0,10)}}</span>
+                                    <span v-if="subitem.summary">{{subitem.summary}}</span>
+                                </div>
+                            </div>
+                            <net-status :reload="reload" :loading="policyList.loading" :no-data="!policyList.loading && !policyList.list.length"></net-status>
+                        </div>
+                    </div>
+                </div>
+                <div id="ndtPolicy" class="mui-slider-item mui-control-content mui-active">
+                    <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll" id="scroll-ndtPolicy">
+                            <div class="itemWrap">
+                                <div class="newsItem" @tap.stop.prevent="showPage('newDetail',subitem,'policy')" v-for="subitem in ndtPolicyList.list">
+                                    <div class="avatar" v-if="subitem.linkImageUrl">
+                                        <img :src="logo(subitem.linkImageUrl)" alt="" onerror="javascript:this.remove();">
+                                    </div>
+                                    <h3>{{subitem.title}}</h3>
+                                    <span>{{subitem.updateByName || '农贷通'}} · {{subitem.updateAt.substr(0,10)}}</span>
+                                    <span v-if="subitem.summary">{{subitem.summary}}</span>
+                                </div>
+                            </div>
+                            <net-status :reload="reload" :loading="policyList.loading" :no-data="!policyList.loading && !policyList.list.length"></net-status>
+                        </div>
+                    </div>
+                </div>
+                <div :id="'slider-'+item.id" v-for="(item,index) in navList" v-if="item.value !== '新闻'" class="mui-slider-item mui-control-content">
+                    <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll" :id="'scroll-'+item.id">
+                            <div class="itemWrap">
+                                <div class="newsItem" @tap.stop.prevent="showPage('newDetail',subitem)" v-for="subitem in item.list">
+                                    <div class="avatar" v-if="subitem.linkImageUrl">
+                                        <img :src="logo(subitem.linkImageUrl)" alt="" onerror="javascript:this.remove();">
+                                    </div>
+                                    <h3>{{subitem.title}}</h3>
+                                    <span>{{subitem.source || '农贷通'}} · {{subitem.updateAt.substr(0,10)}}</span>
+                                </div>
+                            </div>
+                            <net-status :reload="reload" :loading="item.loading" :no-data="!item.loading && !item.list.length"></net-status>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

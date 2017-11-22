@@ -1,0 +1,25 @@
+<section class="login">
+    <header class="mui-bar orange white">
+        <span class="mui-action-back iconfont icon-close mui-pull-left"></span>
+        <h1 class="mui-title">登录</h1>
+    </header>
+    <section class="mui-content">
+    	<div class="login-box space-between">
+    		<div class="nav">
+	            <span :class="{active: isActive==0 }" @click="switchNav(0)">账号登录</span>
+	            <span :class="{active: isActive==1 }" @click="switchNav(1)">手机号登录</span>
+	        </div>
+    	</div>
+        <form class="loginForm">
+            <div class="item">
+                <input v-if="isActive==0" type="text" name="" id="phoneOrEmail" v-model="phoneOrEmail" placeholder="请输入账号">
+                <input v-else-if="isActive==1" type="tel" name="" id="phoneOrEmail" v-model="phoneOrEmail" placeholder="请输入手机号">
+            </div>
+            <div class="item">
+                <input type="password" name="" id="password" v-model="password" placeholder="请输入密码">
+            </div>
+            <a href="javascript:;" class="forget mui-pull-right" @tap="showPage('forget')">忘记密码？</a>
+            <a href="javascript:;" class="btn block loginBtn" @tap="login">登录</a>
+        </form>
+    </section>
+</section>

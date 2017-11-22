@@ -1,0 +1,17 @@
+<section id="newDetail">
+    <header class="mui-bar orange">
+        <span class="mui-action-back iconfont icon-back mui-pull-left"></span>
+        <h1 class="mui-title">{{type=="info"?"资讯详情":"政策详情"}}</h1>
+        <button class="mui-btn mui-btn-link mui-pull-right mui-hidden"></button>
+    </header>
+    <section class="mui-content">
+        <div class="loadStatus" :class="{'loading':loading}"><span class="mui-spinner"></span></div>
+        <section v-if="!loading && detail" class="detailContent">
+            <header class="articleTitle">
+                <h3>{{detail.title}}</h3>
+                <span>{{detail.source || detail.updateByName || '农贷通'}} · {{detail.updateAt.substr(0,10)}}</span>
+            </header>
+            <article class="articleContent" v-if="content && !loading" v-html="content"></article>
+        </section>
+    </section>
+</section>

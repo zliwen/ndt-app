@@ -1,0 +1,81 @@
+@import "../../common/scss/reset";
+@import "../../common/scss/product";
+html,
+body {
+    height: 100%;
+}
+
+#products {
+    height: 100%;
+    .banner {
+        height: 2.2rem;
+        width: 100%;
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+    .mui-slider {
+        height: calc(100% - 2.2rem);
+        .mui-slider-group {
+            height: calc(100% - 1.22rem);
+            width: 100%;
+            .mui-table-view {
+                background: #f2f2f2;
+                overflow: hidden;
+                .mui-table-view-cell {
+                    padding: 0;
+                    margin-bottom: 0.16rem;
+                    background: #fff;
+                    &:after {
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+    .mui-control-content {
+        background-color: white;
+        min-height: 215px;
+    }
+    .mui-control-content .mui-loading {
+        margin-top: 50px;
+    }
+    .mui-segmented-control {
+        &.mui-segmented-control-inverted {
+            background-color: #fff;
+            box-shadow: 0 0 0 1px #e7e7e7 inset;
+            height: 1.2rem;
+            .mui-control-item {
+                font-size: .3rem;
+                line-height: .48rem;
+                padding-top: .12rem;
+                color: #999999;
+                position: relative;
+                i {
+                    display: block;
+                }
+                &.mui-active {
+                    color: #ff762b;
+                    &:after {
+                        position: absolute;
+                        content: " ";
+                        bottom: 0;
+                        height: 2px;
+                        background-color: #ff762b;
+                        width: 100%;
+                        left: 0;
+                        right: 0;
+                    }
+                }
+            }
+            &~.mui-slider-group .mui-slider-item {
+                border: 0 none !important;
+            }
+        }
+        &~.mui-slider-progress-bar {
+            background-color: #ff762b;
+            height: .02rem;
+        }
+    }
+}

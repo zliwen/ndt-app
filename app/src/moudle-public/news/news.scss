@@ -1,0 +1,94 @@
+@import "../../common/scss/reset";
+html,
+body {
+    height: 100%;
+}
+
+#news {
+    height: 100%;
+    .mui-slider {
+        height: 100%;
+        .mui-slider-group {
+            height: calc(100% - .9rem);
+            width: 100%;
+            .mui-scroll {
+                div.newsItem {
+                    background-color: #ffffff;
+                    margin-bottom: .2rem;
+                    overflow: hidden;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    .avatar {
+                        max-height: 3.5rem;
+                        display: flex;
+                        align-items: center;
+                        align-content: center;
+                        justify-content: center;
+                        overflow: hidden;
+                        img {
+                            margin: 0 auto;
+                            vertical-align: middle;
+                            flex: 1;
+                        }
+                    }
+                    h3 {
+                        margin: 0;
+                        padding: .20rem .3rem;
+                        line-height: .48rem;
+                        color: #333333;
+                        font-size: .34rem;
+                    }
+                    span {
+                        font-size: .26rem;
+                        color: #999;
+                        line-height: .28rem;
+                        display: block;
+                        padding: 0 .3rem .3rem;
+                    }
+                }
+            }
+        }
+    }
+    .mui-control-content {
+        min-height: 215px;
+        background-color: #f5f5f5;
+    }
+    .mui-control-content .mui-loading {
+        margin-top: 50px;
+    }
+    .mui-segmented-control {
+        &.mui-segmented-control-inverted {
+            background-color: #fff;
+            box-shadow: 0 0 0 1px #e7e7e7 inset;
+            height: .9rem;
+            .mui-control-item {
+                font-size: .3rem;
+                line-height: .9rem;
+                color: #666;
+                padding: 0 .3rem;
+                position: relative;
+                &.mui-active {
+                    color: #ff762b;
+                    &:after {
+                        position: absolute;
+                        content: " ";
+                        bottom: 0;
+                        height: 2px;
+                        background-color: #ff762b;
+                        width: 100%;
+                        left: 0;
+                        right: 0;
+                    }
+                }
+            }
+            &~.mui-slider-group .mui-slider-item {
+                border: 0 none !important;
+            }
+        }
+        &~.mui-slider-progress-bar {
+            background-color: #ff762b;
+            height: .02rem;
+        }
+    }
+}

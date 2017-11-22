@@ -1,0 +1,117 @@
+@import "../../common/scss/reset";
+html,
+body {
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+.content {
+    background-color: transparent !important;
+    .info {
+        text-align: center;
+        padding: .55rem 0 .4rem;
+        .icon-back {
+            color: #333333;
+            height: .9rem;
+            width: .7rem;
+            text-align: center;
+            line-height: .9rem;
+            font-size: .52rem;
+            display: block;
+            padding-left: .25rem;
+        }
+        h3 {
+            margin: 0 auto;
+            line-height: .44rem;
+            font-size: .36rem;
+            color: #333333;
+            position: relative;
+            max-width: 5rem;
+            span {
+                display: inline-block;
+                font-size: .24rem;
+                height: .34rem;
+                line-height: .34rem;
+                box-shadow: 0 0 0 1px #ff6600;
+                color: #ff6600;
+                border-radius: .17rem;
+                padding: 0 .1rem;
+                margin: 0 .1rem;
+                width: .7rem;
+                position: absolute;
+                bottom: .05rem;
+                right: -.7rem;
+            }
+        }
+        p {
+            color: #b9b9b9;
+            font-size: .26rem;
+            margin: 0;
+        }
+    }
+    .itemList {
+        width: 6.7rem;
+        margin: 0 auto;
+        background-color: #ffffff;
+        overflow: hidden;
+        ul {
+            margin: 0;
+            padding: 0 .34rem;
+            list-style: none;
+            li {
+                list-style: none;
+                width: 2.83rem;
+                float: left;
+                height: 2.8rem;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                flex-direction: column;
+                flex-wrap: wrap;
+                position: relative;
+                i {
+                    display: block;
+                    width: .94rem;
+                    height: .94rem;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    margin-bottom: .08rem;
+                }
+                span {
+                    font-size: .28rem;
+                    color: #999999;
+                }
+                &:nth-child(even) {
+                    &:before {
+                        position: absolute;
+                        height: 100%;
+                        width: 1px;
+                        content: " ";
+                        background-color: #f2f2f2;
+                        right: 0;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+                &:after {
+                    position: absolute;
+                    height: 1px;
+                    width: 100%;
+                    content: " ";
+                    background-color: #f2f2f2;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                }
+                &:nth-last-child(2),
+                &:last-child {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

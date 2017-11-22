@@ -1,0 +1,36 @@
+<section class="realAuth">
+    <header class="mui-bar orange white">
+        <span class="mui-action-back iconfont icon-back mui-pull-left"></span>
+        <h1 class="mui-title">实名认证</h1>
+    </header>
+    <section class="mui-content">
+        <net-status :reload="reload" :loading="loading" :no-data="!info && !loading"></net-status>
+        <section v-if="!loading && info">
+            <div class="userInfo">
+                <div class="infoItem" v-if="userType === 202">
+                    <label class="name">姓名</label>
+                    <input class="value black" type="text" v-model="info.name" placeholder="请填写您的真实姓名">
+                </div>
+                <div class="infoItem" v-if="userType === 202">
+                    <label class="name">身份证号</label>
+                    <input class="value black" type="text" v-model="info.identityId" placeholder="请填写您的真实身份证号码">
+                </div>
+                <div class="infoItem" v-if="userType === 203">
+                    <label class="name">法人姓名</label>
+                    <input class="value black" type="text" v-model="info.legalPerson" placeholder="请填写企业法人姓名">
+                </div>
+                <div class="infoItem" v-if="userType === 203">
+                    <label class="name">法人身份证号</label>
+                    <input class="value black" type="text" v-model="info.legalPersonIdentityId" placeholder="请填写企业法人身份证号码">
+                </div>
+            </div>
+            <div class="pictures">
+                <h3>{{userType === 203?'请上传企业证件照片（多证合一营业执照）':'请上传身份证照片'}}</h3>
+                <div class="item" :class="{handle:!info.handle,licence: userType === 203}" ref="handle" data-aspect-ratio="1.5864" v-img-cropper:handle="imgChange" :style="{backgroundImage:'url('+(replaceUrl(info.handle)||(userType === 203?'assets/images/ndt/auth/licence@3x.png':'assets/images/ndt/auth/handelcard@3x.png'))+')'}"></div>
+                <div class="item" :class="{positive:!info.positive}" ref="positive" data-aspect-ratio="1.5864" v-img-cropper:positive="imgChange" :style="{backgroundImage:'url('+(replaceUrl(info.positive)||'assets/images/ndt/auth/positive@3x.png')+')'}"></div>
+                <div class="item" :class="{negative:!info.negative}" ref="negative" data-aspect-ratio="1.5864" v-img-cropper:negative="imgChange" :style="{backgroundImage:'url('+(replaceUrl(info.negative)||'assets/images/ndt/auth/negative@3x.png')+')'}"></div>
+                <a href="javascript:;" @tap.stop.prevent="saveInfo" class="btn block">完成</a>
+            </div>
+        </section>
+    </section>
+</section>

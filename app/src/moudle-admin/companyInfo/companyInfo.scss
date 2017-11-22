@@ -1,0 +1,220 @@
+@import "../../common/scss/reset";
+@import "../../../../assets/css/mui.picker.all.css";
+@import "../../../../assets/css/mui.poppicker.css";
+html,
+body {
+    height: 100%;
+    background-color: #fff;
+}
+
+.mui-content {
+    background-color: transparent !important;
+}
+
+.header {
+    background-color: #fff;
+    padding: .3rem .42rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &:after {
+        content: " ";
+        height: .01rem;
+        background-color: #f2f2f2;
+        left: .42rem;
+        right: .18rem;
+        position: absolute;
+        bottom: 0;
+    }
+    .avatar {
+        width: 1.5rem;
+        height: 1.5rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0rem .08rem .28rem 0rem rgba(78, 78, 78, .12);
+        background-color: #ffffff;
+        border: solid 1px #ffffff;
+    }
+    .name {
+        h3 {
+            font-size: .3rem;
+            color: #999999;
+            margin: 0;
+            line-height: .45rem;
+            font-weight: normal;
+        }
+        p {
+            font-size: .28rem;
+            color: #999999;
+            margin: .1rem 0 0;
+            height: .35rem;
+            line-height: .35rem;
+            i {
+                font-weight: bold;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.userInfo {
+    background: #ffffff;
+    .infoItem {
+        height: 1rem;
+        position: relative;
+        padding: .2rem .42rem;
+        display: flex;
+        align-items: center;
+        &:after {
+            content: " ";
+            height: .01rem;
+            background-color: #f2f2f2;
+            left: .42rem;
+            right: .18rem;
+            position: absolute;
+            bottom: 0;
+        }
+        .name {
+            font-size: .28rem;
+            color: #999999;
+            min-width: 1.5rem;
+        }
+        .value {
+            flex: 1;
+            font-size: .30rem;
+            color: #999999;
+            text-align: right;
+            padding: 0;
+            margin-bottom: 0;
+            border: none;
+            &::-webkit-input-placeholder {
+                color: #dedede;
+            }
+            &.black {
+                color: #333333;
+            }
+        }
+        &.address {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            position: relative;
+            height: 1.2rem;
+            .name {
+                min-width: 1rem;
+            }
+            input {
+                height: 1.2rem;
+                line-height: .6rem;
+                padding: .3rem .02rem;
+                border: 0 none;
+                width: 100%;
+                margin: 0;
+                display: block;
+                font-size: .28rem;
+                flex: 1;
+                &#town,
+                &#village {
+                    flex: 1.5
+                }
+                &::-webkit-input-placeholder {
+                    color: #dedede;
+                    text-align: right;
+                }
+            }
+        }
+    }
+    .mui-content-padded {
+        background-color: #f2f2f2;
+        font-size: .32rem;
+        padding: .15rem .3rem;
+        margin: 0;
+        color: #999
+    }
+}
+
+.pictures {
+    background-color: #ffffff;
+    margin-top: .2rem;
+    overflow: hidden;
+    h3 {
+        margin: 0;
+        font-size: .28rem;
+        color: #333333;
+        text-align: center;
+        height: 1.07rem;
+        line-height: 1.07rem;
+        font-weight: normal;
+    }
+    .item {
+        width: 5.6rem;
+        height: 3.53rem;
+        margin: 0 auto;
+        margin-bottom: .24rem;
+        background-color: rgba(255, 137, 72, 1);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        box-shadow: 0 0 0 .04rem rgba(255, 137, 72, 1);
+        &:after {
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+            height: 1rem;
+            line-height: 1rem;
+            color: #ffffff;
+            font-size: .28rem;
+        }
+        &.licence {
+            background-size: 35%;
+            background-position: center 28%;
+            border-radius: 1px;
+            &:after {
+                content: "上传营业执照";
+            }
+        }
+        &.positive {
+            background-size: 57%;
+            background-position: center 32%;
+            border-radius: 1px;
+            &:after {
+                content: "上传身份证正面";
+            }
+        }
+        &.negative {
+            background-size: 57%;
+            background-position: center 32%;
+            border-radius: 1px;
+            &:after {
+                content: "上传身份证反面";
+            }
+        }
+    }
+}
+
+.btn {
+    width: 6.9rem;
+    display: block;
+    height: .9rem;
+    line-height: .9rem;
+    font-size: .36rem;
+    text-align: center;
+    border-radius: .45rem;
+    border: 0 none;
+    clear: both;
+    margin: 1rem auto;
+    &.block {
+        background-color: #ff762b;
+        color: #ffffff;
+    }
+    &.white {
+        background-color: #ffffff;
+        color: #ff762b;
+        box-shadow: 0 0 0 1px #ff762b;
+    }
+}

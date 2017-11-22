@@ -1,0 +1,35 @@
+<section id="applicationDetail">
+    <header class="mui-bar orange white">
+        <span class="mui-action-back iconfont icon-back mui-pull-left"></span>
+        <h1 class="mui-title">申请详情</h1>
+    </header>
+    <section class="mui-content">
+        <div class="loadStatus" :class="{'loading':!detail}"><span class="mui-spinner"></span></div>
+        <div class="banner" v-if="detail" :style="{backgroundImage:'url('+bannerImg+')'}">{{getUnit(0,detail.state)}}</div>
+        <div class="applicationInfo" v-if="detail">
+            <div class="avatar" :style="{backgroundImage:logo(detail.logoImageUrl)}"></div>
+            <div class="info">
+                <h3 class="title">{{detail.productName}}</h3>
+                <span class="time">{{detail.orgName}}</span>
+                <p class="sum">贷款金额：<span class="red">{{detail.applyAmount}}{{getUnit(22,detail.applyAmountUnit)}}</span></p>
+                <p class="month">贷款期限：{{detail.applyTerm}}{{getUnit(23,detail.applyTermUnit)}}</p>
+                <p class="month">贷款方式：<span v-for="(item,index) in detail.guaranteeType">{{index!==0?'，':''}}{{getUnit(28,item)}}</span></p>
+            </div>
+        </div>
+        <div class="statusProgress" v-if="loanFlow.length">
+            <dl>
+                <template v-for="item in loanFlow">
+                    <dt>{{item.stateValue}}</dt>
+                    <dd>
+                        <p v-if="item.msg">机构留言：{{item.msg}}</p>
+                        <p v-if="item.operatorName">操作员：{{item.operatorName}}</p>
+                        <p>{{timeFormat(item.syncTime,'yyyy-MM-dd hh:mm:ss')}}</p>
+                    </dd>
+                </template>
+            </dl>
+        </div>
+        <div class="applyBtn" v-if="loanFlow.length==1" @tap="cancelApply">
+            取消申请
+        </div>
+    </section>
+</section>

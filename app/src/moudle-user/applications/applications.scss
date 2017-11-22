@@ -1,0 +1,171 @@
+@import "../../common/scss/reset";
+@import "../../common/scss/product";
+html,
+body {
+    height: 100%;
+}
+
+#applications {
+    height: 100%;
+    .mui-slider {
+        height: 100%;
+        .mui-slider-group {
+            height: calc(100% - .94rem);
+            width: 100%;
+            .mui-table-view {
+                background: #f2f2f2;
+                overflow: hidden;
+                .mui-table-view-cell {
+                    padding: 0;
+                    margin-bottom: 0.16rem;
+                    background: #fff;
+                    &:after {
+                        left: 0;
+                        display: none;
+                    }
+                    &.applicationItem {
+                        width: 7rem;
+                        margin: .2rem auto;
+                        height: 2.24rem;
+                        border-radius: .06rem;
+                        background-color: #ffffff;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        align-content: center;
+                        vertical-align: middle;
+                        .avatar {
+                            width: 1.86rem;
+                            height: 1.86rem;
+                            margin-left: .2rem;
+                            background-size: contain;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                        .info {
+                            flex-grow: 1;
+                            margin-left: .35rem;
+                            position: relative;
+                            vertical-align: middle;
+                            display: flex;
+                            flex-direction: column;
+                            align-content: left;
+                            label {
+                                position: absolute;
+                                padding: 0 .2rem;
+                                height: .4rem;
+                                line-height: .4rem;
+                                margin-top: -0.15rem;
+                                background-color: #46b5fb;
+                                border-radius: .2rem;
+                                right: .2rem;
+                                top: 50%;
+                                color: #ffffff;
+                                font-size: .26rem;
+                                vertical-align: middle;
+                                display: flex;
+                                align-content: center;
+                                align-items: center;
+                                justify-content: center;
+                                &.s_2 {
+                                    background-color: #ff762b;
+                                }
+                                &.s_3 {
+                                    background-color: rgb(17, 133, 75);
+                                }
+                                &.s_4 {
+                                    background-color: red;
+                                }
+                                &.s_1 {
+                                    background-color: #46B5FB;
+                                }
+                                &.s_5 {
+                                    background-color: #FF006D;
+                                }
+                                &.s_6 {
+                                    background-color: rgb(17, 133, 75);
+                                }
+                                &.s_7 {
+                                    background-color: #FF9300;
+                                }
+                                &.s_8 {
+                                    background-color: rgb(17, 133, 75);
+                                }
+                                &.s_9 {
+                                    background-color: #04350F;
+                                }
+                                &.s_10 {
+                                    background-color: #0A8C7E;
+                                }
+                                &.s_11 {
+                                    background-color: red;
+                                }
+                                &.s_12 {
+                                    background-color: #0C7F4C;
+                                }
+                                &.s_13,
+                                &.s_14,
+                                &.s_15 {
+                                    background-color: #C11010;
+                                }
+                            }
+                            .title {
+                                font-size: .36rem;
+                                color: #333333;
+                                height: .4rem;
+                                line-height: .4rem;
+                                margin: 0 0 .2rem;
+                            }
+                            .time {
+                                font-size: .26rem;
+                                color: #b9b9b9;
+                                height: .3rem;
+                                line-height: .3rem;
+                            }
+                            .sum,
+                            .month {
+                                color: #666666;
+                                font-size: .28rem;
+                                height: .3rem;
+                                line-height: .3rem;
+                                margin-top: .1rem;
+                                .red {
+                                    color: #e85624
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mui-control-content {
+        min-height: 215px;
+        background-color: #f5f5f5;
+    }
+    .mui-control-content .mui-loading {
+        margin-top: 50px;
+    }
+    .mui-segmented-control {
+        &.mui-segmented-control-inverted {
+            background-color: #fff;
+            box-shadow: 0 1px 1px 1px #e7e7e7;
+            height: .92rem;
+            .mui-control-item {
+                font-size: .34rem;
+                line-height: .92rem;
+                color: #666;
+                &.mui-active {
+                    color: #ff762b;
+                }
+            }
+            &~.mui-slider-group .mui-slider-item {
+                border: 0 none !important;
+            }
+        }
+        &~.mui-slider-progress-bar {
+            background-color: #ff762b;
+            height: .02rem;
+        }
+    }
+}

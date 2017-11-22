@@ -1,0 +1,80 @@
+@import "../../common/scss/reset";
+html,
+body {
+    height: 100%;
+}
+
+.filterPage {
+    padding: .8rem .5rem;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    .filterItem {
+        h3 {
+            font-size: .37rem;
+            color: #333333;
+            margin: 0 0 .4rem;
+            font-weight: normal;
+        }
+        .itemWrap {
+            overflow: hidden;
+            padding: 2px 0;
+            line-height: .575rem;
+            .item {
+                height: .575rem;
+                font-size: .32rem;
+                padding: 0 .25rem;
+                color: #666666;
+                display: flex;
+                float: left;
+                justify-content: center;
+                background-color: #f2f2f2;
+                border-radius: .28rem;
+                margin-bottom: .38rem;
+                margin-right: .35rem;
+                &.active {
+                    color: #ff6600;
+                    background-color: #ffffff;
+                    box-shadow: 0 0 0 1px #ff6600;
+                }
+            }
+            .maxSum {
+                width: 3rem;
+                height: .575rem;
+                text-align: center;
+                font-size: .32rem;
+                background-color: #f2f2f2;
+                border-radius: .28rem;
+                border: 0 none;
+            }
+            .sum {
+                font-size: .32rem;
+                color: #333333;
+            }
+        }
+    }
+    .btnGroup {
+        height: 1rem;
+        line-height: 1rem;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-top: solid 1px #e6e6e6;
+        .btn {
+            width: 50%;
+            text-align: center;
+            font-size: .4rem;
+            &.block {
+                background-color: #ff6600;
+                color: #ffffff;
+            }
+            &.white {
+                background-color: #ffffff;
+                color: #333333;
+            }
+        }
+    }
+}

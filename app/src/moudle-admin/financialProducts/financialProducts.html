@@ -1,0 +1,46 @@
+<section id="products">
+    <header class="mui-bar orange">
+        <span class="mui-action-back iconfont icon-back mui-pull-left"></span>
+        <h1 class="mui-title">金融产品</h1>
+    </header>
+    <section class="mui-content">
+        <section class="banner" :style="{backgroundImage:'url('+bannerImg+')'}"></section>
+        <section class="productsList">
+            <div class="toolBar">
+                <div class="sort" @tap.stop.prevent="toggleList">{{current.name}} <i class="iconfont icon-icon_sort"></i></div>
+                <div class="filter" @tap="openMenu">筛选 <i class="iconfont icon-icon_filter"></i></div>
+            </div>
+            <ul class="orderList" v-show="sortActive">
+                <li v-for="(item,index) in sortData" :class="{active: current.value===item.value}" @tap.stop.prevent="setSort(index)">{{item.name}} <i v-if="current.value===item.value" class="iconfont icon-choice"></i></li>
+            </ul>
+            <div class="list">
+                <div class="mask" v-show="sortActive"></div>
+                <net-status :reload="reload" :loading="loading" :no-data="!loading && !productsList.length"></net-status>
+                <div class="mui-scroll-wrapper" v-if="!loading && productsList.length">
+                    <div class="mui-scroll" id="products-list">
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell proItem" v-for="item in productsList" @tap.stop.prevent="showPage('productDetail',item.id)">
+                                <div class="productInfo">
+                                    <div class="avatar mui-hidden" :style="{backgroundImage:logo(item.orgLogoImageUrl || '')}">
+                                    </div>
+                                    <div class="bank">
+                                        <h3 class="title">{{item.name}}</h3>
+                                        <div class="name ellipsis">{{item.orgName}}</div>
+                                    </div>
+                                    <div class="desc">
+                                        <p v-if="item.loanTypeNames && item.loanTypeNames.length">贷款方式：<span class="red">{{item.loanTypeNames.join("，")}}</span></p>
+                                        <p v-if="item.productToNames && item.productToNames.length">贷款对象：{{item.productToNames.join("，")}}</p>
+                                        <p v-if="item.divisionNames && item.divisionNames.length">所属区域：{{item.divisionNames.join("，")}}</p>
+                                    </div>
+                                    <div class="labels" v-if="item.labelNames && item.labelNames.length">
+                                        <label v-for="label in item.labelNames">{{label}}</label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</section>

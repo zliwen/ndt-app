@@ -1,0 +1,21 @@
+<section id="creditIndex">
+    <section class="content">
+        <header class="info" :style="{paddingTop:paddingTop}">
+            <span class="mui-action-back iconfont icon-back mui-pull-left"></span>
+            <h3>{{detail.companyName}}<span v-if="detail.companyEnterpriseStatus">{{detail.companyEnterpriseStatus}}</span></h3>
+            <p>法人：{{detail.frName}} 注册资本：{{detail.regCap}}</p>
+        </header>
+        <div class="itemList">
+            <ul>
+                <li @tap="back">
+                    <i :style="{backgroundImage: 'url(assets/images/ndt/se_btn_search@3x.png)'}"></i>
+                    <span>搜索</span>
+                </li>
+                <li @tap="open('creditDetail',detail,item)" v-for="item in creditData">
+                    <i :style="{backgroundImage: getIcon(item.icon)}"></i>
+                    <span>{{item.name}}</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+</section>

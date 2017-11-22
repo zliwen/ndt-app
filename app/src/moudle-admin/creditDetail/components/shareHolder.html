@@ -1,0 +1,17 @@
+<section class="shareHolder">
+    <div class="tableCont">
+        <table class="table">
+            <tr>
+                <th :style="{maxWidth:(100/detail.header.length)+'px'}" v-for="item in detail.header">{{item.title||" "}}</th>
+            </tr>
+            <tr v-for="item in detail.result">
+                <td :style="{maxWidth:(100/detail.header.length)+'px'}" v-for="title in detail.header">{{item[title.dataIndex] || " "}}</td>
+            </tr>
+            <tr v-if="!detail.result.length">
+                <td :colspan="detail.header.length">
+                    <div class="loadStatus noData"><span class="mui-spinner"></span></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

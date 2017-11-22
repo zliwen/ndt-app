@@ -1,0 +1,67 @@
+<section class="userInfo">
+    <header class="mui-bar orange white">
+        <span class="mui-action-back iconfont icon-back mui-pull-left"></span>
+        <h1 class="mui-title">身份信息</h1>
+        <button class="mui-btn mui-btn-link mui-pull-right" @tap.stop.prevent="saveInfo">保存</button>
+    </header>
+    <section class="mui-content">
+        <net-status :reload="reload" :loading="loading" :no-data="!info && !loading"></net-status>
+        <section v-if="!loading && info">
+            <header class="header">
+                <div class="name">
+                    <h3>头像</h3>
+                    <!-- <p>未实名认证</p> -->
+                </div>
+                <div class="avatar" v-img-cropper:avatar="avatarChange" :style="{backgroundImage:'url('+(imageUrl||'assets/images/avatar.jpg')+')'}"></div>
+            </header>
+            <div class="userInfo">
+                <div class="infoItem">
+                    <label class="name">用户类型</label>
+                    <span class="value">{{getUnit(2,info.userType)}}</span>
+                </div>
+                <div class="infoItem">
+                    <label class="name">姓名</label>
+                    <input class="value black" type="text" v-model="info.name" placeholder="请填写您的称呼">
+                </div>
+                <div class="infoItem">
+                    <label class="name">手机认证</label>
+                    <input class="value black" type="tel" v-model="info.mobile" value="" readonly="readonly" placeholder="请填写注册电话">
+                </div>
+                <div class="infoItem">
+                    <label class="name">性别</label>
+                    <input class="value black" type="tel" v-model="info.genderName" @tap.stop.prevent="showPicker('genderPicker')" readonly="readonly" placeholder="请选择性别">
+                </div>
+                <div class="infoItem">
+                    <label class="name">学历</label>
+                    <input class="value black" type="tel" v-model="info.educationName" @tap.stop.prevent="showPicker('educationPicker')" readonly="readonly" placeholder="请选择学历">
+                </div>
+                <div class="infoItem">
+                    <label class="name">婚姻状况</label>
+                    <input class="value black" type="tel" v-model="info.maritalStatusName" @tap.stop.prevent="showPicker('maritalStatusPicker')" placeholder="请选择婚姻状况">
+                </div>
+                <div class="infoItem">
+                    <label class="name">赡养人数</label>
+                    <input class="value black" type="tel" v-model="info.supportNum" placeholder="请填写赡养人数">
+                </div>
+                <div class="infoItem">
+                    <label class="name">未成年子女数</label>
+                    <input class="value black" type="tel" v-model="info.monitorChildren" placeholder="请填写未成年子女数">
+                </div>
+                <div class="infoItem">
+                    <label class="name">所在区域</label>
+                    <input class="value black" type="text" v-model="division" readonly="readonly" placeholder="" placeholder="请在下方选择区域地址">
+                </div>
+                <div class="infoItem address">
+                    <input type="text" name="city" v-model="address.city" @tap.stop.prevent="showPicker('cityPicker')" id="city" readonly="readonly" placeholder="市：">
+                    <input type="text" name="county" :class="{'mui-disabled':!address.city}" v-model="address.county" @tap.stop.prevent="showPicker('countyPicker')" id="county" readonly="readonly" placeholder="区/县：">
+                    <input type="text" name="town" :class="{'mui-disabled':address.county=='市辖区' || !address.county}" v-model="address.town" @tap.stop.prevent="showPicker('townPicker')" id="town" readonly="readonly" placeholder="乡/镇：">
+                    <input type="text" name="village" :class="{'mui-disabled':address.county=='市辖区' || !address.town}" v-model="address.village" @tap.stop.prevent="showPicker('villagePicker')" id="village" readonly="readonly" placeholder="村/社区：">
+                </div>
+                <div class="infoItem">
+                    <label class="name">详细地址</label>
+                    <input class="value black" type="text" v-model="info.address" placeholder="" placeholder="请填写详细地址(社区门牌号)">
+                </div>
+            </div>
+        </section>
+    </section>
+</section>

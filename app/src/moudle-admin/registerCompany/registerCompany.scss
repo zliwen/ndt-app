@@ -1,0 +1,29 @@
+@import "../login/login.scss";
+@import "../../../../assets/css/mui.picker.all.css";
+.registerBtn {
+    margin-top: .5rem;
+}
+
+.login .mui-content .loginForm {
+    margin-top: 0;
+    .item {
+        input {
+            height: 1rem;
+            font-size: .3rem;
+        }
+    }
+    .address {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        input {
+            flex: 1;
+            &#city,
+            &#town,
+            &#village {
+                flex: 1.5
+            }
+        }
+    }
+}

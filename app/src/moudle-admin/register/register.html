@@ -1,0 +1,43 @@
+<section class="login">
+    <header class="mui-bar orange white">
+        <span class="mui-action-back iconfont icon-close mui-pull-left"></span>
+        <h1 class="mui-title">{{title}}</h1>
+    </header>
+    <section class="mui-content">
+        <form class="loginForm">
+            <div class="item">
+                <input type="tel" name="" @blur.stop.prevent="isExist" id="phone" v-model="phone" placeholder="请输入手机号">
+            </div>
+            <div class="item" v-if="type==='resetPwd'">
+                <input type="password" name="" id="oldPassword" v-model="oldPassword" @blur.stop.prevent="oldBlur" placeholder="请输入旧密码">
+            </div>
+            <div class="item">
+                <input type="password" name="" id="password" v-model="password" :placeholder="type==='resetPwd'?'请输入新密码':'请输入密码'">
+            </div>
+            <div class="item" v-if="type!=='bindWx'">
+                <input type="password" name="" id="repeatPwd" v-model="repeatPwd" placeholder="请再次输入密码">
+            </div>
+            <div class="item" v-if="type==='register'">
+                <input type="text" name="" id="name" v-model="name" placeholder="请输入姓名">
+            </div>
+            <div class="item" v-if="type==='register'">
+                <input type="tel" name="" id="identityId" v-model="identityId" placeholder="请输入身份证号码">
+            </div>
+            <div class="item address" v-if="type==='register'">
+                <input type="text" name="city" v-model="address.city" @tap.stop.prevent="showPicker('cityPicker')" id="city" readonly="readonly" placeholder="市：">
+                <input type="text" name="county" :class="{'mui-disabled':!address.city}" v-model="address.county" @tap.stop.prevent="showPicker('countyPicker')" id="county" readonly="readonly" placeholder="区/县：">
+                <input type="text" name="town" :class="{'mui-disabled':address.county=='市辖区' || !address.county}" v-model="address.town" @tap.stop.prevent="showPicker('townPicker')" id="town" readonly="readonly" placeholder="乡/镇：">
+                <input type="text" name="village" :class="{'mui-disabled':address.county=='市辖区' || !address.town}" v-model="address.village" @tap.stop.prevent="showPicker('villagePicker')" id="village" readonly="readonly" placeholder="村/社区：">
+            </div>
+            <div class="item" v-if="type==='register'">
+                <input type="text" name="" id="addressStr" v-model="addressStr" placeholder="请输入详细地址(社区门牌号)">
+            </div>
+            <div class="item verifyCode" v-if="type!=='bindWx'">
+                <input type="tel" name="" id="validateId" v-model="validateId" placeholder="请输入验证码">
+                <a href="javascript:;" id="vallidateBtn" class="verifyBtn btn white" @tap.stop.prevent="getValidateId">获取验证码</a>
+            </div>
+            <a href="javascript:;" class="forget mui-pull-right" @tap.stop.prevent="toRegister()" v-if="type==='bindWx'">没有账号？点击注册</a>
+            <a href="javascript:;" @tap.stop.prevent="register" class="registerBtn btn block">{{btnTxt}}</a>
+        </form>
+    </section>
+</section>

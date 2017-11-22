@@ -1,0 +1,58 @@
+<section class="login">
+    <header class="mui-bar orange white">
+        <span class="mui-action-back iconfont icon-close mui-pull-left" :class="{'icon-back':step===2}"></span>
+        <h1 class="mui-title">{{title}}</h1>
+        <button class="mui-btn mui-btn-link mui-pull-right">第 {{step}} 步</button>
+    </header>
+    <section class="mui-content">
+        <div class="loginForm" v-show="step===1">
+            <div class="item">
+                <input type="tel" @blur.stop.prevent="isExist" id="phone" v-model="phone" placeholder="请输入登录手机">
+            </div>
+            <div class="item">
+                <input type="password" id="password" v-model="password" placeholder="请输入登录密码">
+            </div>
+            <div class="item">
+                <input type="password" id="repeatPwd" v-model="repeatPwd" placeholder="请再次输入密码">
+            </div>
+            <div class="item address">
+                <input type="text" name="city" v-model="address.city" @tap.stop.prevent="showPicker('cityPicker')" id="city" readonly="readonly" placeholder="地址   市：">
+                <input type="text" name="county" :class="{'mui-disabled':!address.city}" v-model="address.county" @tap.stop.prevent="showPicker('countyPicker')" id="county" readonly="readonly" placeholder="区/县：">
+                <input type="text" name="town" :class="{'mui-disabled':address.county=='市辖区' || !address.county}" v-model="address.town" @tap.stop.prevent="showPicker('townPicker')" id="town" readonly="readonly" placeholder="乡/镇：">
+                <input type="text" name="village" :class="{'mui-disabled':address.county=='市辖区' || !address.town}" v-model="address.village" @tap.stop.prevent="showPicker('villagePicker')" id="village" readonly="readonly" placeholder="村/社区：">
+            </div>
+            <div class="item">
+                <input type="text" id="addressStr" v-model="addressStr" placeholder="请输入详细地址(社区门牌号)">
+            </div>
+            <a href="javascript:;" @click.stop.prevent="nextStep" class="registerBtn btn block">下一步</a>
+        </div>
+        <form class="loginForm" v-show="step===2">
+            <div class="item">
+                <input readonly="readonly" type="text" id="paperType" name="paperType" v-model="paperTypeName" placeholder="请选择证件类型" @tap.stop.prevent="showPicker('paperTypePicker')">
+            </div>
+            <div class="item">
+                <input type="text" id="name" v-model="name" placeholder="请输入企业名称">
+            </div>
+            <div class="item">
+                <input type="text" id="code" v-model="code" :placeholder="paperType===1501?'请输入企业工商注册号':'社会统一信用代码'">
+            </div>
+            <div class="item">
+                <input type="text" id="corporation" v-model="corporation" placeholder="请输入企业法人姓名">
+            </div>
+            <div class="item">
+                <input type="text" id="corporationIdentity" v-model="corporationIdentity" placeholder="请输入企业法人身份证号码">
+            </div>
+            <div class="item">
+                <input type="text" id="contactName" v-model="contactName" placeholder="请输入企业联系人姓名">
+            </div>
+            <div class="item">
+                <input type="text" id="contactIdentityId" v-model="contactIdentityId" placeholder="请输入企业联系人身份证号码">
+            </div>
+            <div class="item verifyCode">
+                <input type="tel" id="validateId" v-model="validateId" placeholder="请输入验证码">
+                <a href="javascript:;" id="vallidateBtn" class="verifyBtn btn white" @tap.stop.prevent="getValidateId">获取验证码</a>
+            </div>
+            <a href="javascript:;" @tap.stop.prevent="register" class="registerBtn btn block">{{btnTxt}}</a>
+        </form>
+    </section>
+</section>

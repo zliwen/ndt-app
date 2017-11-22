@@ -1,0 +1,26 @@
+<section id="user">
+    <section class="header" id="indexHeader" style="background-image:url(assets/images/ndt/profile_bg@3x.png)">
+        <header class="headerbg">
+            <div class="navBar mui-bar mui-bar-transparent">
+                <span class="iconfont mui-action-back icon-close mui-pull-left"></span>
+                <h3 class="mui-title">个人中心</h3>
+            </div>
+        </header>
+    </section>
+    <section class="userContent">
+        <div class="avatar" :style="{backgroundImage:'url('+(isLogin && replaceUrl(avatar)||'assets/images/avatar.jpg')+')'}"></div>
+        <div class="name">
+            <h3 @tap.stop.prevent="openPersonal">{{isLogin?(userName||'无名英雄'):'未登录'}}</h3>
+            <p @tap.stop.prevent="openPersonal">{{!isLogin?'点击前往登录':(!userName?'请点击下方完善用户资料':"")}}<i class="iconfont icon-right" v-if="!isLogin"></i></p>
+        </div>
+        <ul class="nav">
+            <li @tap.stop.prevent="showPage('userProfile')"><img :src="'assets/images/ndt/profile_icon_user@3x.png'" alt=""><span>用户资料</span></li>
+            <li @tap.stop.prevent="showPage('resetPwd')"><img :src="'assets/images/ndt/profile_icon_sco@3x.png'" alt=""><span>修改密码</span></li>
+        </ul>
+        <div class="menu">
+            <span @tap.stop.prevent="showPage('settings')">设置</span>
+            <span>帮助</span>
+        </div>
+    </section>
+    <div class="version">版本：V {{version}}</div>
+</section>

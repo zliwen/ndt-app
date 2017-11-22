@@ -1,0 +1,136 @@
+@import "../../common/scss/reset";
+@import "../../../../assets/css/mui.picker.all.css";
+html,
+body {
+    height: 100%;
+    background-color: #fff;
+}
+
+.mui-content {
+    background-color: transparent !important;
+}
+
+.header {
+    background-color: #fff;
+    padding: .3rem .42rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &:after {
+        content: " ";
+        height: .01rem;
+        background-color: #f2f2f2;
+        left: .42rem;
+        right: .18rem;
+        position: absolute;
+        bottom: 0;
+    }
+    .avatar {
+        width: 1.5rem;
+        height: 1.5rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0rem .08rem .28rem 0rem rgba(78, 78, 78, .12);
+        background-color: #ffffff;
+        border: solid 1px #ffffff;
+    }
+    .name {
+        h3 {
+            font-size: .3rem;
+            color: #999999;
+            margin: 0;
+            line-height: .45rem;
+            font-weight: normal;
+        }
+        p {
+            font-size: .28rem;
+            color: #999999;
+            margin: .1rem 0 0;
+            height: .35rem;
+            line-height: .35rem;
+            i {
+                font-weight: bold;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.userInfo {
+    background: #ffffff;
+    .infoItem {
+        height: 1rem;
+        position: relative;
+        padding: .2rem .42rem;
+        display: flex;
+        align-items: center;
+        &:after {
+            content: " ";
+            height: .01rem;
+            background-color: #f2f2f2;
+            left: .42rem;
+            right: .18rem;
+            position: absolute;
+            bottom: 0;
+        }
+        .name {
+            font-size: .28rem;
+            color: #999999;
+            min-width: 1.5rem;
+        }
+        .value {
+            flex: 1;
+            font-size: .30rem;
+            color: #999999;
+            text-align: right;
+            padding: 0;
+            margin-bottom: 0;
+            border: none;
+            &::-webkit-input-placeholder {
+                color: #dedede;
+            }
+            &.black {
+                color: #333333;
+            }
+        }
+        &.address {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            position: relative;
+            height: 1.2rem;
+            .name {
+                min-width: 1rem;
+            }
+            input {
+                height: 1.2rem;
+                line-height: .6rem;
+                padding: .3rem .02rem;
+                border: 0 none;
+                width: 100%;
+                margin: 0;
+                display: block;
+                font-size: .28rem;
+                flex: 1;
+                &#town,
+                &#village {
+                    flex: 1.5
+                }
+                &::-webkit-input-placeholder {
+                    color: #dedede;
+                    text-align: right;
+                }
+            }
+        }
+    }
+    .mui-content-padded {
+        background-color: #f2f2f2;
+        font-size: .32rem;
+        padding: .15rem .3rem;
+        margin: 0;
+        color: #999
+    }
+}

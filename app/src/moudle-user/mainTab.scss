@@ -1,0 +1,31 @@
+body {
+    background-color: #f3f3f3;
+    .mui-bar {
+        background: #fafafa;
+        box-shadow: none;
+        overflow: hidden;
+        height: 1.19rem;
+        position: relative;
+        border-top: solid 1px rgba(204, 204, 204, 0.32);
+        .mui-tab-label {
+            font-size: .26rem !important;
+            height: .4rem;
+            line-height: .4rem;
+        }
+        .mui-active {
+            .mui-tab-label {
+                color: #ffa62b;
+            }
+        }
+        .mui-icon {
+            height: .5rem !important;
+            width: .5rem !important;
+            top: 0 !important;
+            margin: .06rem auto .05rem;
+            img {
+                width: .5rem;
+                height: .5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,221 @@
+@import "../../common/scss/reset";
+@import "../../../../assets/css//mui.picker.min.css";
+#apply {
+    width: 100%;
+    .applyInfo {
+        background-color: #fff;
+        overflow: hidden;
+        .status {
+            font-size: .28rem;
+            color: #b9b9b9;
+            text-align: center;
+            height: .305rem;
+            line-height: .305rem;
+            margin-top: .5rem;
+        }
+        .title {
+            font-size: .46rem;
+            color: #333333;
+            height: .5rem;
+            line-height: .5rem;
+            text-align: center;
+            margin-top: .5rem;
+        }
+        .cardInfo {
+            width: 6.9rem; // height: 3.6rem;
+            margin: .9rem auto .4rem;
+            box-shadow: 0 0 0 1px #e7e7e7;
+            background-color: #fbfbfb;
+            border-radius: 2px;
+            position: relative;
+            &:after {
+                content: "申请人信息";
+                position: absolute;
+                width: 1.7rem;
+                height: .46rem;
+                font-size: .28rem;
+                left: -.02rem;
+                top: -.46rem;
+                color: #ffffff;
+                border-top-left-radius: .06rem;
+                border-top-right-radius: .06rem;
+                background-color: #ff762b;
+                vertical-align: middle;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+            }
+            p {
+                height: .9rem;
+                line-height: .9rem;
+                padding: 0 .3rem;
+                overflow: hidden;
+                margin: 0;
+                width: 100%;
+                position: relative;
+                &:last-child {
+                    &:after {
+                        display: none;
+                    }
+                }
+                &:after {
+                    content: " ";
+                    width: 100%;
+                    position: absolute;
+                    height: 1px;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #e7e7e7;
+                }
+                .name {
+                    float: left;
+                    font-size: .28rem;
+                    color: #999999;
+                }
+                .value {
+                    font-size: .32rem;
+                    color: #333333;
+                    float: right;
+                    &.address {
+                        font-size: .26rem;
+                    }
+                }
+            }
+        }
+    }
+    dl.applyForm {
+        background-color: #f2f2f2;
+        margin: 0;
+        padding-bottom: 1.5rem;
+        padding-top: .15rem;
+        dt {
+            font-size: .32rem;
+            color: #666666;
+            text-align: center;
+            margin: 0;
+            padding: .3rem 0;
+        }
+        dd {
+            margin: 0;
+            text-align: center;
+            vertical-align: middle;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: .5rem;
+            input {
+                border: 0 none;
+                background-color: transparent;
+                margin: 0;
+                text-align: center;
+                width: 1.8rem;
+                vertical-align: middle;
+                &::-webkit-input-placeholder {
+                    color: #cccccc;
+                }
+            }
+            .context {
+                padding: 0;
+                width: 70%;
+                border-bottom: dashed .04rem #ffd2b3;
+                height: .6rem;
+                line-height: .6rem;
+                font-size: .3rem;
+            }
+            .sum {
+                font-size: .5rem;
+                color: #ff762b;
+                height: .8rem;
+                line-height: .6rem;
+                padding: .1rem;
+                border-bottom: dashed .04rem #ffd2b3;
+                &::-webkit-input-placeholder {
+                    font-size: .28rem;
+                }
+            }
+            .month {
+                font-size: .48rem;
+                color: #bababa;
+                padding: .05rem .1rem;
+                width: 1.5rem;
+            }
+            .pawn {
+                font-size: .3rem;
+                color: #bababa;
+                padding: .05rem 0;
+            }
+            i.icon-appl_btn_scroll {
+                color: #ff762b;
+                padding: 0 .05rem;
+                font-size: .22rem;
+            }
+            span.desc {
+                font-size: .3rem;
+                color: #666666;
+            }
+            textarea.desc {
+                width: 7rem;
+                height: 1.84rem;
+                border-radius: .06rem;
+                padding: .1rem .2rem;
+                font-size: .28rem;
+                margin: 0;
+                border: 0 none;
+                &::-webkit-input-placeholder {
+                    text-align: center;
+                    color: #b9b9b9;
+                }
+            }
+            .loanType {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                width: 5rem;
+                vertical-align: middle;
+                li {
+                    padding: 0;
+                    margin: .1rem .2rem;
+                    padding-right: .10rem;
+                    display: inline-block;
+                    background-color: #f5f5f5;
+                    border: solid .02rem #b9b9b9;
+                    height: .42rem;
+                    line-height: .40rem;
+                    vertical-align: middle;
+                    border-radius: .23rem;
+                    color: #b9b9b9;
+                    font-size: .26rem;
+                    overflow: hidden;
+                    span {
+                        width: .3rem;
+                        height: .24rem;
+                        margin: .075rem;
+                        font-size: .28rem;
+                        font-weight: bold;
+                        text-align: center;
+                        line-height: .24rem;
+                        color: #b9b9b9;
+                        border-radius: 100%;
+                        float: left;
+                    }
+                    &.active {
+                        color: #ff6600;
+                        border: solid .02rem #ff6600;
+                        span {
+                            color: #ff6600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // .applicationBtn {
+    //     position: relative;
+    //     width: 6.9rem;
+    //     margin: 0 auto .3rem;
+    //     border-radius: .06rem;
+    // }
+}

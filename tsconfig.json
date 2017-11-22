@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "es2015",
+        "moduleResolution": "node",
+        "lib": ["dom", "scripthost", "es5", "es2015.promise"],
+        "sourceMap": true,
+        "declaration": false,
+        "noImplicitAny": false,
+        "preserveConstEnums": false,
+        "allowJs": true,
+        "emitDecoratorMetadata": false,
+        "experimentalDecorators": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "strictNullChecks": true,
+        "noImplicitThis": true,
+        "removeComments": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "compileOnSave": false,
+    "include": [
+        "app/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}

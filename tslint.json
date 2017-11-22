@@ -1,0 +1,33 @@
+{
+    "extends": "tslint:latest",
+    "rules": {
+        "no-var-requires": false,
+        "no-empty": false,
+        "no-unused-expression": false,
+        "no-shadowed-variable": false,
+        "variable-name": [
+            false
+        ],
+        "eofline": false,
+        "max-classes-per-file": [
+            false
+        ],
+        "member-access": [
+            false
+        ],
+        "indent": [
+
+        ],
+        "object-literal-sort-keys": false,
+        "max-line-length": [
+
+        ],
+        "no-console": [
+            false
+        ],
+        "trailing-comma": [true, {
+            "multiline": "never",
+            "singleline": "never"
+        }]
+    }
+}

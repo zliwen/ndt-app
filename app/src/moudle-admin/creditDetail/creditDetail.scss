@@ -1,0 +1,65 @@
+@import "../../common/scss/reset";
+html,
+body {
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+.creditDetail {
+    height: 100%;
+    .mui-slider {
+        height: 100%;
+        .mui-slider-group {
+            height: calc(100% - .9rem);
+            width: 100%;
+            .mui-scroll {}
+        }
+    }
+    .mui-control-content {
+        min-height: 215px;
+        background-color: #ffffff;
+    }
+    .mui-control-content .mui-loading {
+        margin-top: 50px;
+    }
+    .mui-segmented-control {
+        .mui-scroll {
+            display: flex;
+            height: 100%;
+            min-width: 100%;
+        }
+        &.mui-segmented-control-inverted {
+            background-color: #fff;
+            box-shadow: 0 0 0 1px #e7e7e7 inset;
+            height: .9rem;
+            .mui-control-item {
+                font-size: .3rem;
+                line-height: .9rem;
+                color: #666;
+                padding: 0 .3rem;
+                position: relative;
+                flex: 1;
+                &.mui-active {
+                    color: #ff762b;
+                    &:after {
+                        position: absolute;
+                        content: " ";
+                        bottom: 0;
+                        height: 2px;
+                        background-color: #ff762b;
+                        width: 100%;
+                        left: 0;
+                        right: 0;
+                    }
+                }
+            }
+            &~.mui-slider-group .mui-slider-item {
+                border: 0 none !important;
+            }
+        }
+        &~.mui-slider-progress-bar {
+            background-color: #ff762b;
+            height: .02rem;
+        }
+    }
+}

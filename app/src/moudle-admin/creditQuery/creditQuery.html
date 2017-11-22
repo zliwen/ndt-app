@@ -1,0 +1,52 @@
+<section id="creditQuery">
+    <header class="mui-bar orange">
+        <span class="mui-action-back iconfont icon-back mui-pull-left mui-hidden"></span>
+        <h1 class="mui-title">信用查询</h1>
+        <button class="mui-btn mui-btn-link mui-pull-right mui-hidden"></button>
+    </header>
+    <section class="mui-content">
+        <div class="searchForm" :class="{'focus':isFocus}">
+            <input type="search" ref="search" v-model="keyword" @keyup.enter="search" @focus.stop.prevent="focus" @blur.stop.prevent="blur" placeholder="请输入企业名称、法人等关键词搜索">
+            <a href="javascript:;" class="searchBtn" @tap.stop.prevent="search">{{loading?"搜索中...":"搜索"}}</a>
+        </div>
+        <div class="searchList">
+            <div class="loadStatus" :class="{'loading':loading}"><span class="mui-spinner"></span></div>
+            <ul v-if="list.length && !loading">
+                <li v-for="item in list" @tap.stop.prevent="handelDetail('creditIndex',item)">
+                    <header>
+                        <div class="logo"><i class="iconfont icon-company"></i></div>
+                        <h3 class="mui-ellipsis-2">{{item.companyName}}</h3>
+                        <span>{{item.companyEnterpriseStatus}}</span>
+                    </header>
+                    <article>
+                        <div class="item">
+                            <label>统一社会信用代码：</label>
+                            <p>{{item.creditCode}}</p>
+                        </div>
+                        <div class="item">
+                            <label>法定代表人：</label>
+                            <p>{{item.frName}}</p>
+                        </div>
+                        <div class="item">
+                            <label>成立时间：</label>
+                            <p>{{item.esDate}}</p>
+                        </div>
+                        <div class="item">
+                            <label>类型：</label>
+                            <p>{{item.companyType}}</p>
+                        </div>
+                        <div class="item">
+                            <label>注册资本：</label>
+                            <p>{{item.regCap}}</p>
+                        </div>
+                        <div class="item">
+                            <label>住所：</label>
+                            <p>{{item.address}}</p>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+            <div class="loadStatus" :class="{loading: reLoading && !loading}"><span class="mui-spinner"></span></div>
+        </div>
+    </section>
+</section>

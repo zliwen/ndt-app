@@ -1,0 +1,43 @@
+<section id="productDetail">
+    <header class="mui-bar orange">
+        <span class="mui-action-back iconfont icon-back mui-pull-left"></span>
+        <h1 class="mui-title">银行贷款</h1>
+    </header>
+    <section class="mui-content">
+        <div class="loadStatus" :class="{loading: loading,noData:!detail && !loading}"><span class="mui-spinner"></span></div>
+        <section class="detailContent" v-if="!loading && detail">
+            <div class="productInfo">
+                <div class="avatar mui-hidden" :style="{backgroundImage:logo(detail.logoImageUrl || '')}">
+                </div>
+                <div class="bank">
+                    <h3 class="title">{{detail.name}}</h3>
+                    <div class="name ellipsis">{{detail.orgName}}</div>
+                </div>
+                <div class="desc">
+                    <p v-if="detail.loanTypeNames && detail.loanTypeNames.length">贷款方式：<span class="red">{{detail.loanTypeNames.join("，")}}</span></p>
+                    <p v-if="detail.productToNames && detail.productToNames.length">贷款对象：{{detail.productToNames.join("，")}}</p>
+                    <p v-if="detail.divisionNames && detail.divisionNames.length">所属区域：{{detail.divisionNames.join("，")}}</p>
+                </div>
+                <div class="labels" v-if="detail.labelNames && detail.labelNames.length">
+                    <label v-for="label in detail.labelNames">{{label}}</label>
+                </div>
+            </div>
+            <div class="productionDesc">
+                <h3 class="title">项目介绍</h3>
+                <div class="content">
+                    <p class="p">贷款额度：<span>{{formatMoney(detail.maxAmount)}} {{getUnit(22,detail.maxAmountUnit)}}</span></p>
+                    <!-- <p class="p">贷款额度：<span>{{formatMoney(detail.mixAmount)}} - {{formatMoney(detail.maxAmount)}} {{getUnit(22,detail.maxAmountUnit)}}</span></p> -->
+                    <!-- <p class="p">贷款期限：<span>{{detail.mixTerm}} - {{detail.maxTerm}} {{getUnit(23,detail.mixTermUnit)}}</span></p> -->
+                    <p class="p">贷款期限：<span>{{detail.maxTerm}} {{getUnit(23,detail.mixTermUnit)}}</span></p>
+                    <p class="p" v-if="detail.rate">贷款费率：<span>{{detail.rate}}</span></p>
+                    <p class="p" v-if="detail.phone">联系电话：<span>{{detail.phone}}</span></p>
+                    <p class="p" v-if="detail.paybackTypeName">还款方式：<span>{{detail.paybackTypeName}}</span></p>
+                    <div class="p" v-if="detail.remark" v-html="detail.remark"></div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <div v-if="!loading && detail" class="applicationBtn" @tap.stop.prevent="showPage('apply',detail)">
+        立即申请
+    </div>
+</section>

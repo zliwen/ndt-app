@@ -1,0 +1,24 @@
+<section class="creditDetail">
+    <header class="mui-bar orange">
+        <span class="mui-action-back iconfont icon-back mui-pull-left"></span>
+        <h1 class="mui-title" v-if="info">{{info.name}}</h1>
+    </header>
+    <section class="mui-content">
+        <div class="loadStatus" :class="{'loading':loading,noData: (!info || !info.navList.length) && !loading}"><span class="mui-spinner"></span></div>
+        <div id="slider" class="mui-slider" v-if="!loading && info && info.navList.length">
+            <div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                <div class="mui-scroll">
+                    <a class="mui-control-item" :class="{'mui-active':index===0}" v-for="(item, index) in info.navList" :href="'#slider-'+item.comName">{{item.value}}</a>
+                </div>
+            </div>
+            <div class="mui-slider-group">
+                <div :id="'slider-'+item.comName" v-for="(item,index) in info.navList" :class="{'mui-active':index===0}" class="mui-slider-item mui-control-content">
+                    <component v-bind:is="item.component" :detail="item.data">
+                        <!-- 组件在 vm.currentview 变化时改变！ -->
+                    </component>
+                    <div class="loadStatus" :class="{'loading':item.loading,noData:!item.data && !item.loading}"><span class="mui-spinner"></span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

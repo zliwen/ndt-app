@@ -1,0 +1,152 @@
+@import "../../common/scss/reset";
+@import "../../../../assets/css/mui.picker.all.css";
+html,
+body {
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+.mui-content {
+    background-color: transparent !important;
+}
+
+.userInfo {
+    background: #ffffff;
+    margin: .2rem auto;
+    .infoItem {
+        height: 1.2rem;
+        position: relative;
+        padding: .2rem .42rem;
+        display: flex;
+        align-items: center;
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+        &:after {
+            content: " ";
+            height: .01rem;
+            background-color: #f2f2f2;
+            left: .42rem;
+            right: .18rem;
+            position: absolute;
+            bottom: 0;
+        }
+        .name {
+            font-size: .32rem;
+            color: #333333;
+            min-width: 1.5rem;
+        }
+        .value {
+            flex: 1;
+            font-size: .28rem;
+            color: #999999;
+            text-align: right;
+            padding: 0;
+            margin-bottom: 0;
+            border: none;
+            i {
+                font-size: .4rem;
+            }
+        }
+    }
+    .mui-content-padded {
+        background-color: #f2f2f2;
+        font-size: .32rem;
+        padding: .15rem .3rem;
+        margin: 0;
+        color: #999
+    }
+}
+
+.pictures {
+    background-color: #ffffff;
+    margin-top: .2rem;
+    overflow: hidden;
+    h3 {
+        margin: 0;
+        font-size: .28rem;
+        color: #333333;
+        text-align: center;
+        height: 1.07rem;
+        line-height: 1.07rem;
+        font-weight: normal;
+    }
+    .item {
+        width: 5.6rem;
+        height: 3.53rem;
+        margin: 0 auto;
+        margin-bottom: .24rem;
+        background-color: rgba(255, 137, 72, 1);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        box-shadow: 0 0 0 .04rem rgba(255, 137, 72, 1);
+        &:after {
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+            height: 1rem;
+            line-height: 1rem;
+            color: #ffffff;
+            font-size: .28rem;
+        }
+        &.handle {
+            background-size: 57%;
+            background-position: center 32%;
+            border-radius: 1px;
+            &:after {
+                content: "上传手持身份证";
+            }
+            &.licence {
+                background-size: 35%;
+                background-position: center 28%;
+                border-radius: 1px;
+                &:after {
+                    content: "上传营业执照";
+                }
+            }
+        }
+        &.positive {
+            background-size: 57%;
+            background-position: center 32%;
+            border-radius: 1px;
+            &:after {
+                content: "上传身份证正面";
+            }
+        }
+        &.negative {
+            background-size: 57%;
+            background-position: center 32%;
+            border-radius: 1px;
+            &:after {
+                content: "上传身份证反面";
+            }
+        }
+    }
+}
+
+.btn {
+    width: 6.9rem;
+    display: block;
+    height: .9rem;
+    line-height: .9rem;
+    font-size: .36rem;
+    text-align: center;
+    border-radius: .45rem;
+    border: 0 none;
+    clear: both;
+    margin: 1rem auto;
+    &.block {
+        background-color: #ff762b;
+        color: #ffffff;
+    }
+    &.white {
+        background-color: #ffffff;
+        color: #ff762b;
+        box-shadow: 0 0 0 1px #ff762b;
+    }
+}

@@ -1,0 +1,48 @@
+.statusComp,
+.companyInfo,
+.shareHolder,
+.overseaInst,
+.lawPersonComp {
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+    ul {
+        li {
+            font-size: .26rem;
+            display: flex;
+            justify-content: space-between;
+            span {
+                color: #999999;
+                font-size: .26rem;
+                flex: 1;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.table {
+    margin-top: 5px;
+    min-width: 100%;
+    tr {
+        th {
+            color: #333333;
+            background-color: #fbfbfb;
+        }
+        td {
+            background-color: #ffffff;
+            color: #999999;
+            .loadStatus {
+                padding: 5px 0;
+                font-size: .24rem;
+            }
+        }
+        td,
+        th {
+            text-align: center;
+            padding: 5px 0;
+            border: solid 1px #e7e7e7;
+            font-size: .24rem;
+        }
+    }
+}

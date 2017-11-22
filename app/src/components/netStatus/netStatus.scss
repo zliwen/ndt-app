@@ -1,0 +1,35 @@
+.netStatus {
+    .loadingStatus {
+        font-size: .24rem;
+        text-align: center;
+        padding: .2rem 0;
+        background-color: transparent;
+        .statusImage {
+            width: 2.5rem;
+            height: 2.5rem;
+            margin: .1rem auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: transparent;
+        }
+        p.statusDesc {
+            color: #666666;
+            font-size: .3rem;
+            text-align: center;
+            margin: .4rem 0;
+        }
+        .statusBtn {
+            width: 1.8rem;
+            border-radius: .3rem;
+            background-color: #ff6600;
+            color: #ffffff;
+            font-size: .3rem;
+            text-align: center;
+            margin: .3rem auto;
+            height: .6rem;
+            line-height: .6rem;
+            vertical-align: middle;
+        }
+    }
+}

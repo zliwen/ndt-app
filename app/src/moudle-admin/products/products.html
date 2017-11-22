@@ -1,0 +1,45 @@
+<section id="products">
+    <header class="mui-bar orange">
+        <span class="mui-action-back iconfont icon-back mui-pull-left"></span>
+        <h1 class="mui-title">金融产品</h1>
+        <button class="mui-btn mui-btn-link mui-pull-right mui-hidden">立即贷款</button>
+    </header>
+    <section class="mui-content">
+        <section class="banner" :style="{backgroundImage:'url('+bannerImg+')'}"></section>
+        <net-status :reload="reload" :loading="loading" :no-data="!loading && !navList.length"></net-status>
+        <div id="slider" class="mui-slider" v-if="!loading && navList.length">
+            <div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                <a class="mui-control-item" :class="{'mui-active':index===current}" v-for="(item,index) in navList" :href="'#slider-'+item.id"><i class="iconfont" :class="[item.icon]"></i>{{item.value}}</a>
+            </div>
+            <div class="mui-slider-group">
+                <div :id="'slider-'+item.id" v-for="(item,index) in navList" :class="{'mui-active':index===current}" class="mui-slider-item mui-control-content">
+                    <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll" :id="'scroll-'+item.id">
+                            <ul class="mui-table-view">
+                                <li class="mui-table-view-cell proItem" v-for="subItem in item.list" @tap.stop.prevent="showPage('productDetail',subItem.id)">
+                                    <div class="productInfo">
+                                        <div class="avatar mui-hidden" :style="{backgroundImage:logo(subItem.orgLogoImageUrl || '')}">
+                                        </div>
+                                        <div class="bank">
+                                            <h3 class="title">{{subItem.name}}</h3>
+                                            <div class="name ellipsis">{{subItem.orgName}}</div>
+                                        </div>
+                                        <div class="desc">
+                                            <p v-if="subItem.loanTypeNames && subItem.loanTypeNames.length">贷款方式：<span class="red">{{subItem.loanTypeNames.join("，")}}</span></p>
+                                            <p v-if="subItem.productToNames && subItem.productToNames.length">贷款对象：{{subItem.productToNames.join("，")}}</p>
+                                            <p v-if="subItem.divisionNames && subItem.divisionNames.length">所属区域：{{subItem.divisionNames.join("，")}}</p>
+                                        </div>
+                                        <div class="labels" v-if="subItem.labelNames && subItem.labelNames.length">
+                                            <label v-for="label in subItem.labelNames">{{label}}</label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <net-status :reload="reload" :loading="item.loading" :no-data="!item.loading && !item.list.length"></net-status>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,14 @@
+<section class="companyInfo">
+    <ul class="mui-table-view" v-for="item in detail.result">
+        <li class="mui-table-view-cell">法人：<span>{{item.frName}}</span></li>
+        <li class="mui-table-view-cell">地址：<span>{{item.address}}</span></li>
+        <li class="mui-table-view-cell">统一社会信用代码：<span>{{item.creditCode}}</span></li>
+        <li class="mui-table-view-cell">公司类型/状态：<span>{{item.companyType}}</span></li>
+        <li class="mui-table-view-cell">登记机关：<span>{{item.regOrg}}</span></li>
+        <li class="mui-table-view-cell">成立日期：<span>{{item.esDate}}</span></li>
+        <li class="mui-table-view-cell">核准日期：<span>{{item.approvalDate}}</span></li>
+        <li class="mui-table-view-cell">营业日期自：<span>{{item.openFrom}}</span></li>
+        <li class="mui-table-view-cell">营业日期至：<span>{{item.openTo}}</span></li>
+        <li class="mui-table-view-cell">经营范围：<span>{{item.operateScope}}</span></li>
+    </ul>
+</section>

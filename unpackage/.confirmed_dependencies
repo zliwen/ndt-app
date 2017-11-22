@@ -1,0 +1,1499 @@
+{
+  "index.html": {
+    "resources": [
+      "js/libs/flexible.js",
+      "images/slider/yuantiao.jpg",
+      "images/logo.png",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "images/slider/shuijiao.jpg",
+      "css/mui.min.css",
+      "images/slider/cbd.jpg",
+      "images/slider/muwu.jpg",
+      "fonts/iconfont.woff"
+    ],
+    "refer": []
+  },
+  "indexNew.html": {
+    "resources": [
+      "images/icon/xinyong2.png",
+      "js/app.js",
+      "images/icon/gengduo.png",
+      "images/icon/shouye.png",
+      "images/slider/chanpin2.jpg",
+      "fonts/mui.ttf",
+      "images/icon/daikuan2.png",
+      "images/icon/xiaoxi2.png",
+      "images/icon/cunkuan.png",
+      "images/icon/daikuan1.png",
+      "images/icon/chanquan.png",
+      "images/slider/chanpin1.jpg",
+      "images/icon/zhengce.png",
+      "js/libs/flexible.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "css/iconfont.css",
+      "images/icon/geren2.png",
+      "css/mui.min.css",
+      "images/icon/zhidao.png",
+      "images/slider/chanpin3.jpg",
+      "images/icon/yonggong.png",
+      "images/icon/cunwu.png",
+      "fonts/iconfont.woff",
+      "js/libs/jquery-3.2.1.min.js",
+      "js/common/common.js",
+      "/js/mui.enterfocus.js",
+      "js/mui.enterfocus.js",
+      "images/icon/home/gengduo.png",
+      "images/icon/home/daikuanchanp.png",
+      "images/icon/home/yonggongxinxi.png",
+      "images/icon/home/zhengcechaxun.png",
+      "images/icon/home/chanquanjiaoyi.png",
+      "images/icon/home/chunkuanchanpin.png",
+      "images/icon/home/zhongzhizhidao.png",
+      "images/icon/home/cunwuxinxi.png",
+      "images/icon/home/chanquan.png",
+      "images/icon/home/daikuan.png",
+      "images/icon/home/zhongzhi.png",
+      "images/icon/home/zhengce.png",
+      "images/icon/home/cunkuan.png",
+      "images/icon/home/cunwu.png",
+      "images/icon/home/yonggong.png",
+      "images/slider/banner_new1.png",
+      "js/vue.mini.js",
+      "images/icon/icon5.png",
+      "images/icon/icon4.png",
+      "images/icon/icon6.png",
+      "images/slider/banner_new2.png",
+      "images/icon/icon3.png",
+      "images/icon/icon1.png",
+      "images/icon/icon2.png",
+      "images/slider/app_banner05.png",
+      "images/slider/app_banner04.png"
+    ],
+    "refer": [
+      "html/loan/loanProductList.html",
+      "html/deposit/depositList.html",
+      "html/policy/policyList.html",
+      "html/property/propertyList.html",
+      "html/plant/plantingInstruction.html",
+      "html/village/villageAffairs.html",
+      "html/more/more.html",
+      "html/recruitment/recruitmentList.html",
+      "html/user/userIndex.html",
+      "html/credit/myCredit.html",
+      "html/loan/loanProductDetail.html",
+      "html/login/login.html",
+      "html/loan/chooseRole.html",
+      "html/search/search.html",
+      "html/news/myNews.html",
+      "html/loan/applyLoan.html"
+    ]
+  },
+  "html/loan/loanProductList.html": {
+    "resources": [
+      "images/icon/daikuan.png",
+      "css/app.css",
+      "images/icon/shouye2.png",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "fonts/iconfont.woff",
+      "images/icon/xinyong2.png",
+      "js/app.js",
+      "images/slider/chanpin2.jpg",
+      "fonts/mui.ttf",
+      "images/icon/xiaoxi2.png",
+      "images/slider/chanpin1.jpg",
+      "js/libs/flexible.js",
+      "js/mui.min.js",
+      "images/icon/geren2.png",
+      "images/slider/chanpin3.jpg",
+      "js/common/common.js",
+      "js/libs/jquery-3.2.1.min.js",
+      "js/mui.pullToRefresh.js",
+      "js/mui.pullToRefresh.material.js",
+      "js/vue.mini.js"
+    ],
+    "refer": [
+      "html/credit/myCredit.html",
+      "indexNew.html",
+      "html/loan/loanProductDetail.html",
+      "html/news/myNews.html",
+      "html/loan/chooseRole.html",
+      "html/user/userIndex.html",
+      "html/login/login.html",
+      "html/loan/applyLoan.html"
+    ]
+  },
+  "html/deposit/depositList.html": {
+    "resources": [
+      "js/app.js",
+      "css/deposit.css",
+      "images/slider/chanpin2.jpg",
+      "fonts/mui.ttf",
+      "js/deposit/depositList.js",
+      "images/slider/chanpin1.jpg",
+      "js/libs/flexible.js",
+      "js/common/common.js",
+      "css/app.css",
+      "js/mui.min.js",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "images/slider/chanpin3.jpg",
+      "html/deposit/depositDetail.html"
+    ],
+    "refer": [
+      "html/deposit/depositDetail.html"
+    ]
+  },
+  "html/deposit/depositDetail.html": {
+    "resources": [
+      "images/icon/xinyong2.png",
+      "images/icon/shouye.png",
+      "images/icon/geren2.png",
+      "images/icon/xiaoxi2.png",
+      "images/icon/daikuan2.png",
+      "html/deposit/depositList.html",
+      "css/deposit.css",
+      "css/app.css",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "js/libs/flexible.js",
+      "js/mui.min.js",
+      "js/app.js",
+      "js/common/common.js"
+    ],
+    "refer": [
+      "html/deposit/depositList.html"
+    ]
+  },
+  "html/more/more.html": {
+    "resources": [
+      "css/mui.min.css",
+      "images/slider/cbd.jpg",
+      "images/back/zhaoxiangmu.jpg",
+      "images/back/zhaozijin.jpg",
+      "js/libs/flexible.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf"
+    ],
+    "refer": [
+      "html/investment/investmentList.html",
+      "html/financing/financingList.html"
+    ]
+  },
+  "html/credit/myCredit.html": {
+    "resources": [
+      "images/slider/xinxibeijng.jpg",
+      "images/icon/xinyong.png",
+      "js/webviewGroup.js",
+      "images/icon/qiyeLOGO.jpg",
+      "css/mui.min.css",
+      "html/credit/businessLicenseInfo.html",
+      "js/app.js",
+      "fonts/mui.ttf",
+      "images/icon/daikuan2.png",
+      "images/icon/xiaoxi2.png",
+      "js/libs/flexible.js",
+      "css/app.css",
+      "js/mui.min.js",
+      "images/icon/shouye2.png",
+      "images/icon/geren2.png",
+      "js/libs/jquery-3.2.1.min.js",
+      "html/credit/basicInfo_credit.html",
+      "js/vue.mini.js"
+    ],
+    "refer": [
+      "html/credit/businessLicenseInfo.html",
+      "html/news/myNews.html",
+      "indexNew.html",
+      "html/user/userIndex.html",
+      "html/credit/shareholderContributionInfo.html",
+      "html/credit/smokingExaminationResults.html",
+      "html/credit/keyPersonnelInfo.html",
+      "html/credit/changeInfo.html",
+      "html/credit/intellectualPropertyRegistrationInfo.html",
+      "html/credit/branchInfo.html",
+      "html/credit/realEstateMortgageInfo.html",
+      "html/credit/liquidation.html",
+      "html/credit/registrationOfOwnershipInfo.html",
+      "html/loan/loanProductList.html",
+      "html/credit/trademarkRegistrationInfo.html",
+      "html/credit/managementInfo_credit.html",
+      "html/credit/basicInfo_credit.html",
+      "html/credit/financialInfo_credit.html",
+      "html/credit/managementInfo_List_credit.html.html",
+      "html/credit/personalInfo_credit.html",
+      "html/credit/honor-credit.html"
+    ]
+  },
+  "html/credit/businessLicenseInfo.html": {
+    "resources": [
+      "css/infoListView.css",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": []
+  },
+  "html/news/myNews.html": {
+    "resources": [
+      "images/icon/xiaoxi.png",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "fonts/iconfont.woff",
+      "images/icon/xinyong2.png",
+      "images/icon/geren2.png",
+      "images/icon/shouye2.png",
+      "js/libs/flexible.js",
+      "css/app.css",
+      "images/icon/daikuan2.png",
+      "js/app.js",
+      "fonts/mui.ttf",
+      "js/common/common.js",
+      "js/mui.min.js",
+      "images/supply_default_pic_400.jpg",
+      "js/mui.pullToRefresh.js",
+      "js/mui.pullToRefresh.material.js",
+      "js/vue.mini.js"
+    ],
+    "refer": [
+      "html/user/userIndex.html",
+      "html/credit/myCredit.html",
+      "indexNew.html",
+      "html/loan/loanProductList.html",
+      "html/news/newDetail.html"
+    ]
+  },
+  "html/user/userIndex.html": {
+    "resources": [
+      "js/mui.picker.js",
+      "js/mui.poppicker.js",
+      "images/icon/geren.png",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "images/slider/cbd.jpg",
+      "css/mui.poppicker.css",
+      "css/mui.picker.css",
+      "css/app.css",
+      "images/icon/shouye2.png",
+      "fonts/iconfont.woff",
+      "images/icon/xinyong2.png",
+      "js/app.js",
+      "fonts/mui.ttf",
+      "images/icon/daikuan2.png",
+      "images/icon/xiaoxi2.png",
+      "js/libs/flexible.js",
+      "js/mui.min.js",
+      "images/personal/p_icon6.png",
+      "images/personal/p_icon1.png",
+      "images/person_h.png",
+      "images/personal/p_icon5.png",
+      "images/personal/p_icon2.png",
+      "images/personal/p_icon8.png",
+      "images/personal/p_icon4.png",
+      "images/personal/p_icon3.png",
+      "images/personal/p_icon7.png"
+    ],
+    "refer": [
+      "html/news/myNews.html",
+      "html/user/toExamine.html",
+      "indexNew.html",
+      "html/user/personalInfo.html",
+      "html/credit/myCredit.html",
+      "html/loan/loanProductList.html",
+      "html/user/diffusionRecord.html",
+      "html/user/riskSharingRecord.html",
+      "html/user/apply.html",
+      "html/user/perfectInfo.html",
+      "html/user/authentication.html",
+      "html/user/loanProducts.html",
+      "html/user/loanService.html",
+      "html/loan/applyLoan.html",
+      "html/login/login.html",
+      "html/user/modifyPword.html"
+    ]
+  },
+  "html/policy/policyDetail.html": {
+    "resources": [
+      "js/policy/policyDetail.js",
+      "css/app.css",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "js/libs/flexible.js",
+      "js/app.js",
+      "js/common/common.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "js/libs/jquery-3.2.1.min.js"
+    ],
+    "refer": []
+  },
+  "html/policy/policyList.html": {
+    "resources": [
+      "js/mui.pullToRefresh.js",
+      "js/policy/policyList.js",
+      "js/common/common.js",
+      "js/mui.pullToRefresh.material.js",
+      "js/libs/flexible.js",
+      "js/app.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "js/libs/jquery-3.2.1.min.js",
+      "images/noimage.gif",
+      "js/vue.mini.js"
+    ],
+    "refer": [
+      "html/policy/policyDetail.html"
+    ]
+  },
+  "html/village/villageAffairsDetail.html": {
+    "resources": [
+      "images/temp/W020170216533837129789.jpg",
+      "images/temp/W020170216533837113094.jpg",
+      "css/mui.min.css",
+      "css/app.css",
+      "images/supply_default_pic_400.jpg",
+      "js/libs/flexible.js",
+      "js/mui.min.js",
+      "js/app.js"
+    ],
+    "refer": []
+  },
+  "html/village/villageAffairs.html": {
+    "resources": [
+      "css/app.css",
+      "css/mui.min.css",
+      "js/libs/flexible.js",
+      "js/app.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "images/slider/chanpin2.jpg",
+      "js/common/common.js",
+      "images/supply_default_pic_400.jpg"
+    ],
+    "refer": [
+      "html/village/villageAffairsDetail.html"
+    ]
+  },
+  "html/loan/loanProductDetail.html": {
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/libs/flexible.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "js/common/common.js",
+      "js/libs/jquery-3.2.1.min.js",
+      "js/app.js",
+      "images/slider/chanpin1.jpg"
+    ],
+    "refer": [
+      "html/loan/chooseRole.html",
+      "html/login/login.html",
+      "html/loan/applyLoan.html"
+    ]
+  },
+  "html/plant/plantingInstruction.html": {
+    "resources": [
+      "images/slider/shuijiao.jpg",
+      "js/libs/flexible.js",
+      "js/app.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "images/slider/chanpin2.jpg",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "images/supply_default_pic_400.jpg",
+      "js/common/common.js"
+    ],
+    "refer": [
+      "html/plant/plantingInstructionDetail.html"
+    ]
+  },
+  "html/property/propertyList.html": {
+    "resources": [
+      "js/property/propertyList.js",
+      "js/libs/flexible.js",
+      "js/app.js",
+      "js/common/common.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "js/libs/jquery-3.2.1.min.js"
+    ],
+    "refer": [
+      "html/property/moreList.html",
+      "html/property/propertyDetail.html"
+    ]
+  },
+  "html/recruitment/recruitmentList.html": {
+    "resources": [
+      "js/mui.picker.js",
+      "js/mui.poppicker.js",
+      "css/mui.poppicker.css",
+      "css/mui.picker.css",
+      "js/city.data-3.js",
+      "css/app.css",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "fonts/iconfont.woff",
+      "js/libs/flexible.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "js/app.js"
+    ],
+    "refer": [
+      "html/recruitment/recruitmentDetail.html"
+    ]
+  },
+  "html/investment/investmentList.html": {
+    "resources": [
+      "js/finance/dockList.js",
+      "js/mui.picker.js",
+      "js/common/common.js",
+      "js/mui.poppicker.js",
+      "css/mui.poppicker.css",
+      "css/mui.picker.css",
+      "js/city.data-3.js",
+      "fonts/iconfont.woff",
+      "js/libs/flexible.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "js/invesment/investmentList.js",
+      "js/investment/investmentList.js",
+      "js/app.js",
+      "js/mui.enterfocus.js",
+      "js/libs/jquery-3.2.1.min.js",
+      "images/supply_default_pic_400.jpg"
+    ],
+    "refer": [
+      "html/investment/investmentDetail.html"
+    ]
+  },
+  "html/investment/investmentDetail.html": {
+    "resources": [
+      "js/finance/investmentDetail.js",
+      "css/finance.css",
+      "js/libs/flexible.js",
+      "js/common/common.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "fonts/iconfont.woff",
+      "js/investment/investmentDetail.js",
+      "js/app.js",
+      "js/libs/jquery-3.2.1.min.js"
+    ],
+    "refer": [
+      "html/loan/chooseRole.html",
+      "html/loan/applyLoan.html",
+      "html/login/login.html"
+    ]
+  },
+  "html/financing/financingList.html": {
+    "resources": [
+      "js/financing/financingList.js",
+      "js/mui.picker.js",
+      "fonts/mui.ttf",
+      "css/mui.picker.css",
+      "js/city.data-3.js",
+      "fonts/iconfont.woff",
+      "js/libs/flexible.js",
+      "js/common/common.js",
+      "css/app.css",
+      "js/mui.min.js",
+      "js/mui.poppicker.js",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "css/mui.poppicker.css",
+      "js/mui.enterfocus.js",
+      "js/libs/jquery-3.2.1.min.js",
+      "js/app.js"
+    ],
+    "refer": [
+      "html/financing/financingDetail.html"
+    ]
+  },
+  "html/financing/financingDetail.html": {
+    "resources": [
+      "js/finance/financingDetail.js",
+      "js/mui.picker.js",
+      "fonts/mui.ttf",
+      "css/mui.picker.css",
+      "fonts/iconfont.woff",
+      "js/libs/flexible.js",
+      "css/finance.css",
+      "js/common/common.js",
+      "css/app.css",
+      "js/mui.min.js",
+      "js/mui.poppicker.js",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "css/mui.poppicker.css",
+      "js/financing/financingDetail.js",
+      "js/app.js",
+      "js/libs/jquery-3.2.1.min.js"
+    ],
+    "refer": [
+      "html/login/login.html"
+    ]
+  },
+  "html/property/propertyDetail.html": {
+    "resources": [
+      "js/property/propertyDetail.js",
+      "js/libs/flexible.js",
+      "js/app.js",
+      "js/common/common.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "js/libs/jquery-3.2.1.min.js"
+    ],
+    "refer": []
+  },
+  "html/property/moreList.html": {
+    "resources": [
+      "js/property/moreList.js",
+      "js/libs/flexible.js",
+      "js/app.js",
+      "js/common/common.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "js/libs/jquery-3.2.1.min.js"
+    ],
+    "refer": [
+      "html/property/propertyDetail.html"
+    ]
+  },
+  "html/loan/chooseRole.html": {
+    "resources": [
+      "images/back/zhaoxiangmu.jpg",
+      "images/back/zhaozijin.jpg",
+      "js/libs/flexible.js",
+      "images/icon/xinyong2.png",
+      "images/icon/daikuan.png",
+      "js/app.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "images/icon/shouye2.png",
+      "fonts/mui.ttf",
+      "images/icon/geren2.png",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "images/icon/xiaoxi2.png",
+      "images/type/farmer.png",
+      "images/type/business.png"
+    ],
+    "refer": [
+      "html/loan/applyLoanBusiness.html",
+      "html/loan/applyLoanFarmer.html",
+      "html/loan/applyLoan.html"
+    ]
+  },
+  "html/loan/applyLoanFarmer.html": {
+    "resources": [
+      "js/common/common.js",
+      "css/mui.poppicker.css",
+      "css/mui.picker.css",
+      "js/libs/jquery-3.2.1.min.js",
+      "js/libs/flexible.js",
+      "js/app.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "images/type/edit.png"
+    ],
+    "refer": []
+  },
+  "html/loan/applyLoanBusiness.html": {
+    "resources": [
+      "js/libs/flexible.js",
+      "js/app.js",
+      "images/type/edit.png",
+      "js/common/common.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "css/mui.poppicker.css",
+      "css/mui.picker.css",
+      "js/libs/jquery-3.2.1.min.js"
+    ],
+    "refer": []
+  },
+  "html/plant/plantingInstructionDetail.html": {
+    "resources": [
+      "css/app.css",
+      "css/mui.min.css",
+      "images/slider/chanpin2.jpg",
+      "js/libs/flexible.js",
+      "js/app.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf"
+    ],
+    "refer": []
+  },
+  "html/credit/shareholderContributionInfo.html": {
+    "resources": [
+      "css/mui.min.css",
+      "css/infoListView.css",
+      "css/app.css"
+    ],
+    "refer": []
+  },
+  "html/credit/smokingExaminationResults.html": {
+    "resources": [
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "html/credit/changeInfo.html": {
+    "resources": [
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "html/credit/registrationOfOwnershipInfo.html": {
+    "resources": [
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "html/recruitment/recruitmentDetail.html": {
+    "resources": [
+      "css/mui.min.css",
+      "js/libs/flexible.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "js/app.js",
+      "js/common/common.js"
+    ],
+    "refer": []
+  },
+  "html/login/login.html": {
+    "resources": [
+      "js/mui.enterfocus.js",
+      "js/app.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "js/libs/flexible.js",
+      "css/app.css",
+      "js/sha1.js",
+      "js/core.js",
+      "html/login/js/app.js",
+      "html/login/js/mui.enterfocus.js",
+      "html/login/images/sinaweibo.png",
+      "html/login/images/qq.png",
+      "html/login/images/weixin.png"
+    ],
+    "refer": [
+      "html/user/userIndex.html",
+      "html/login/reg.html",
+      "html/login/forget_password.html"
+    ]
+  },
+  "html/login/reg.html": {
+    "resources": [
+      "css/app.css",
+      "css/mui.min.css",
+      "html/login/reg.html",
+      "css/mui.poppicker.css",
+      "css/mui.picker.css",
+      "js/city.data-3.js",
+      "js/libs/jquery-3.2.1.min.js",
+      "js/libs/flexible.js",
+      "js/mui.picker.js",
+      "js/app.js",
+      "js/mui.min.js",
+      "js/mui.poppicker.js",
+      "fonts/mui.ttf",
+      "js/mui.enterfocus.js",
+      "js/city.data-chengdu.js",
+      "js/core.js",
+      "js/sha1.js"
+    ],
+    "refer": [
+      "html/login/reg.html",
+      "indexNew.html"
+    ]
+  },
+  "html/user/toExamine.html": {
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "html/user/reviewDetails.html"
+    ]
+  },
+  "html/credit/intellectualPropertyRegistrationInfo.html": {
+    "resources": [
+      "css/mui.min.css",
+      "css/infoListView.css",
+      "js/libs/flexible.js",
+      "css/app.css",
+      "js/common/common.js",
+      "js/app.js",
+      "js/mui.min.js"
+    ],
+    "refer": []
+  },
+  "html/credit/realEstateMortgageInfo.html": {
+    "resources": [
+      "css/mui.min.css",
+      "css/infoListView.css"
+    ],
+    "refer": []
+  },
+  "html/credit/liquidation.html": {
+    "resources": [
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "html/credit/trademarkRegistrationInfo.html": {
+    "resources": [
+      "images/slider/shuijiao.jpg",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "html/user/personalInfo.html": {
+    "resources": [
+      "css/feedback.css",
+      "js/mui.picker.min.js",
+      "css/app.css",
+      "css/mui.min.css",
+      "css/mui.poppicker.css",
+      "css/mui.picker.min.css",
+      "js/feedback.js",
+      "js/mui.poppicker.js",
+      "js/app.js",
+      "fonts/mui.ttf",
+      "js/city.data-chengdu.js",
+      "js/libs/flexible.js",
+      "js/mui.min.js",
+      "js/libs/jquery-3.2.1.min.js"
+    ],
+    "refer": []
+  },
+  "html/loan/applyLoan.html": {
+    "resources": [
+      "js/libs/flexible.js",
+      "js/app.js",
+      "images/type/edit.png",
+      "js/common/common.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "css/mui.poppicker.css",
+      "css/mui.picker.css",
+      "js/libs/jquery-3.2.1.min.js",
+      "js/mui.picker.min.js",
+      "js/mui.poppicker.js",
+      "js/mui.picker.js"
+    ],
+    "refer": []
+  },
+  "html/search/search.html": {
+    "resources": [
+      "css/mui.poppicker.css",
+      "css/mui.picker.css",
+      "js/libs/flexible.js",
+      "js/app.js",
+      "js/common/common.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "js/mui.enterfocus.js",
+      "js/libs/jquery-3.2.1.min.js"
+    ],
+    "refer": [
+      "html/policy/policyDetail.html"
+    ]
+  },
+  "html/user/diffusionRecord.html": {
+    "refer": [
+      "html/user/insuranceProductDetail.html",
+      "html/user/bankProductDetail.html",
+      "html/user/projectDetail.html",
+      "html/user/policyReleaseDetail.html"
+    ],
+    "resources": [
+      "css/app.css",
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf"
+    ]
+  },
+  "html/user/riskSharingRecord.html": {
+    "refer": [
+      "html/user/riskSharingDetail.html"
+    ],
+    "resources": [
+      "js/libs/flexible.js",
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ]
+  },
+  "html/user/riskSharingDetail.html": {
+    "resources": [
+      "js/mui.zoom.js",
+      "images/slider/yuantiao.jpg",
+      "css/previewimage.css",
+      "js/mui.previewimage.js",
+      "js/libs/flexible.js",
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js",
+      "images/slider/cbd.jpg"
+    ],
+    "refer": []
+  },
+  "html/user/subsidyApplyDetail.html": {
+    "resources": [
+      "css/mui.view.css",
+      "js/mui.picker.min.js",
+      "js/mui.view.js",
+      "js/mui.min.js",
+      "js/mui.poppicker.js",
+      "css/mui.min.css",
+      "css/app.css",
+      "css/mui.picker.css",
+      "css/mui.poppicker.css"
+    ],
+    "refer": []
+  },
+  "html/user/apply.html": {
+    "refer": [
+      "html/user/subsidyApplyDetail.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ]
+  },
+  "html/user/perfectInfo.html": {
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "js/app.js",
+      "js/libs/jquery-3.2.1.min.js"
+    ],
+    "refer": [
+      "html/user/basicInfo.html",
+      "html/user/managementInfo.html",
+      "html/user/payment.html",
+      "html/user/honor.html",
+      "html/user/financialInfo.html",
+      "html/user/insuranceInfo.html",
+      "html/user/transactionInfo.html",
+      "html/user/investmentInfo.html",
+      "html/user/managementList.html",
+      "html/user/honorList.html",
+      "html/user/financialList.html",
+      "html/user/punish.html",
+      "html/user/warrantInfo.html"
+    ]
+  },
+  "html/user/basicInfo.html": {
+    "resources": [
+      "js/mui.picker.min.js",
+      "js/mui.poppicker.js",
+      "css/mui.poppicker.css",
+      "css/mui.picker.min.css",
+      "js/city.data-3.js",
+      "js/app.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/libs/jquery-3.2.1.min.js",
+      "js/city.data-chengdu.js",
+      "js/common/common.js"
+    ],
+    "refer": []
+  },
+  "html/user/managementInfo.html": {
+    "resources": [
+      "css/feedback.css",
+      "js/feedback.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/app.js",
+      "js/libs/jquery-3.2.1.min.js",
+      "js/mui.picker.min.js",
+      "js/mui.poppicker.js",
+      "css/mui.poppicker.css",
+      "css/mui.picker.min.css"
+    ],
+    "refer": [
+      "html/user/managementList.html"
+    ]
+  },
+  "html/news/newDetail.html": {
+    "resources": [
+      "css/mui.min.css",
+      "js/libs/flexible.js",
+      "js/app.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/app.css",
+      "js/common/common.js"
+    ],
+    "refer": []
+  },
+  "html/user/authentication.html": {
+    "refer": [
+      "html/login/login.html"
+    ],
+    "resources": [
+      "js/app.js",
+      "js/mui.picker.min.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "js/mui.poppicker.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/mui.poppicker.css",
+      "css/mui.picker.min.css",
+      "js/city.data-3.js",
+      "js/libs/jquery-3.2.1.min.js",
+      "js/city.data-chengdu.js"
+    ]
+  },
+  "html/user/bankProductDetail.html": {
+    "resources": [
+      "js/libs/flexible.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/app.js",
+      "images/back/zhaoxiangmu.jpg",
+      "js/common/common.js",
+      "images/supply_default_pic_400.jpg",
+      "images/network-error.png",
+      "images/unhappy.png"
+    ],
+    "refer": []
+  },
+  "html/user/loanProducts.html": {
+    "resources": [
+      "js/libs/flexible.js",
+      "js/mui.pullToRefresh.js",
+      "js/app.js",
+      "js/common/common.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "js/mui.pullToRefresh.material.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "images/supply_default_pic_400.jpg"
+    ],
+    "refer": [
+      "html/user/bankProductDetail.html",
+      "html/user/dockProject_Detail.html"
+    ]
+  },
+  "html/credit/branchInfo.html": {
+    "resources": [
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "html/user/honor.html": {
+    "resources": [
+      "js/mui.zoom.js",
+      "css/previewimage.css",
+      "js/mui.previewimage.js",
+      "js/app.js",
+      "js/mui.picker.min.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "js/mui.poppicker.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/mui.poppicker.css",
+      "css/mui.picker.min.css",
+      "js/libs/jquery-3.2.1.min.js"
+    ],
+    "refer": [
+      "html/user/honorList.html"
+    ]
+  },
+  "html/user/financialInfo.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/app.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "css/mui.min.css",
+      "js/libs/jquery-3.2.1.min.js",
+      "js/mui.picker.min.js",
+      "js/mui.poppicker.js",
+      "css/mui.poppicker.css",
+      "css/mui.picker.min.css"
+    ],
+    "refer": [
+      "html/user/financialList.html"
+    ]
+  },
+  "html/user/insuranceInfo.html": {
+    "resources": [
+      "js/mui.zoom.js",
+      "js/mui.previewimage.js",
+      "js/app.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/libs/jquery-3.2.1.min.js",
+      "js/mui.picker.min.js",
+      "js/mui.poppicker.js",
+      "css/mui.poppicker.css",
+      "css/mui.picker.min.css"
+    ],
+    "refer": []
+  },
+  "html/user/payment.html": {
+    "resources": [
+      "js/app.js",
+      "js/mui.zoom.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/mui.previewimage.js",
+      "js/libs/jquery-3.2.1.min.js",
+      "css/mui.poppicker.css",
+      "css/mui.picker.min.css",
+      "js/mui.picker.min.js",
+      "js/mui.poppicker.js"
+    ],
+    "refer": []
+  },
+  "html/user/transactionInfo.html": {
+    "resources": [
+      "images/slider/yuantiao.jpg",
+      "js/app.js",
+      "js/mui.zoom.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/mui.previewimage.js",
+      "images/slider/cbd.jpg",
+      "js/libs/jquery-3.2.1.min.js"
+    ],
+    "refer": []
+  },
+  "html/user/investmentInfo.html": {
+    "resources": [
+      "js/app.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/libs/jquery-3.2.1.min.js",
+      "js/mui.picker.min.js",
+      "js/mui.poppicker.js",
+      "css/mui.poppicker.css",
+      "css/mui.picker.min.css"
+    ],
+    "refer": []
+  },
+  "html/credit/managementInfo_credit.html": {
+    "resources": [
+      "js/mui.picker.min.js",
+      "js/mui.poppicker.js",
+      "css/mui.poppicker.css",
+      "css/mui.picker.min.css",
+      "css/mui.min.css",
+      "css/app.css",
+      "js/common/common.js",
+      "js/app.js",
+      "js/mui.min.js"
+    ],
+    "refer": []
+  },
+  "html/credit/basicInfo_credit.html": {
+    "resources": [
+      "css/app.css",
+      "css/mui.min.css",
+      "js/app.js",
+      "js/mui.min.js"
+    ],
+    "refer": []
+  },
+  "html/credit/financialInfo_credit.html": {
+    "resources": [
+      "js/mui.picker.min.js",
+      "js/mui.poppicker.js",
+      "css/mui.min.css",
+      "css/mui.poppicker.css",
+      "css/mui.picker.min.css",
+      "js/app.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "js/common/common.js"
+    ],
+    "refer": []
+  },
+  "html/credit/managementInfo_List_credit.html.html": {
+    "resources": [
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "html/credit/personalInfo_credit.html": {
+    "resources": [
+      "css/mui.min.css",
+      "js/libs/flexible.js",
+      "css/app.css",
+      "js/mui.min.js",
+      "js/app.js"
+    ],
+    "refer": []
+  },
+  "html/user/managementList.html": {
+    "resources": [
+      "js/app.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/libs/jquery-3.2.1.min.js",
+      "js/common/common.js"
+    ],
+    "refer": [
+      "html/user/managementInfo.html"
+    ]
+  },
+  "html/credit/honor-credit.html": {
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js",
+      "js/app.js",
+      "js/common/common.js"
+    ],
+    "refer": []
+  },
+  "html/user/loanService.html": {
+    "resources": [
+      "js/mui.pullToRefresh.js",
+      "css/app.css",
+      "js/mui.pullToRefresh.material.js",
+      "css/mui.min.css",
+      "js/common/common.js",
+      "js/libs/flexible.js",
+      "js/app.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf"
+    ],
+    "refer": [
+      "html/user/loanService_Detail.html"
+    ]
+  },
+  "html/user/loanService_Detail.html": {
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/libs/flexible.js",
+      "js/app.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "js/common/common.js"
+    ],
+    "refer": []
+  },
+  "html/user/dockProject_Detail.html": {
+    "resources": [
+      "css/mui.min.css",
+      "js/libs/flexible.js",
+      "js/app.js",
+      "js/mui.min.js",
+      "css/app.css",
+      "fonts/mui.ttf",
+      "images/supply_default_pic_400.jpg",
+      "js/common/common.js"
+    ],
+    "refer": []
+  },
+  "html/user/honorList.html": {
+    "resources": [
+      "js/common/common.js",
+      "css/app.css",
+      "css/mui.min.css",
+      "js/libs/jquery-3.2.1.min.js",
+      "js/mui.min.js",
+      "js/app.js"
+    ],
+    "refer": [
+      "html/user/honor.html"
+    ]
+  },
+  "html/user/financialList.html": {
+    "refer": [
+      "html/user/financialInfo.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/libs/jquery-3.2.1.min.js",
+      "js/mui.min.js",
+      "js/app.js",
+      "js/common/common.js"
+    ]
+  },
+  "index_tab.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "indexNew.html",
+      "js/app.js",
+      "js/update.js"
+    ],
+    "refer": [
+      "html/news/myNews.html",
+      "html/credit/myCredit.html",
+      "indexNew.html",
+      "html/loan/loanProductList.html",
+      "html/user/userIndex.html",
+      "html/query/query.html",
+      "html/login/login.html"
+    ]
+  },
+  "html/query/query.html": {
+    "resources": [
+      "css/mui.min.css",
+      "html/query/queryresult.html",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "html/query/queryresult.html"
+    ]
+  },
+  "html/query/queryresult.html": {
+    "resources": [
+      "js/vue.mini.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "js/app.js"
+    ],
+    "refer": [
+      "html/query/companyInfo.html"
+    ]
+  },
+  "html/login/forget_password.html": {
+    "resources": [
+      "css/mui.min.css",
+      "css/mui.poppicker.css",
+      "css/mui.picker.css",
+      "js/libs/flexible.js",
+      "css/app.css",
+      "js/mui.min.js",
+      "js/app.js"
+    ],
+    "refer": []
+  },
+  "html/user/reviewDetails.html": {
+    "href": "html/user/reviewDetails.html",
+    "resources": [
+      "css/app.css",
+      "css/mui.min.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "html/user/policyReleaseDetail.html": {
+    "href": "html/user/policyReleaseDetail.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "html/user/projectDetail.html": {
+    "href": "html/user/projectDetail.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "html/user/insuranceProductDetail.html": {
+    "href": "html/user/insuranceProductDetail.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "html/user/modifyPword.html": {
+    "href": "html/user/modifyPword.html",
+    "resources": [
+      "js/libs/flexible.js",
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js",
+      "js/core.js",
+      "js/sha1.js",
+      "js/app.js",
+      "js/mui.enterfocus.js"
+    ],
+    "refer": [
+      "html/login/login.html"
+    ],
+    "priority": 0
+  },
+  "html/user/punish.html": {
+    "href": "html/user/punish.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "html/user/warrantInfo.html": {
+    "href": "html/user/warrantInfo.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "css/feedback.css",
+      "js/libs/jquery-3.2.1.min.js",
+      "js/mui.min.js",
+      "js/app.js",
+      "js/feedback.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "html/query/companyInfo.html": {
+    "href": "html/query/companyInfo.html",
+    "resources": [
+      "css/mui.min.css",
+      "images/slider/xinxibeijng.jpg",
+      "images/icon/qiyeLOGO.jpg",
+      "js/vue.mini.js",
+      "js/mui.min.js",
+      "images/query/icon1.png",
+      "images/query/icon2.png",
+      "images/query/icon3.png",
+      "images/query/icon4.png"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "dist/app_dev/main.html": {
+    "resources": [
+      "dist/app_dev/css/main.css",
+      "dist/app_dev/js/main.js"
+    ],
+    "refer": []
+  },
+  "dist/app_dev/index.html": {
+    "resources": [
+      "dist/app_dev/assets/css/icons-extra.css",
+      "dist/app_dev/assets/fonts/mui.ttf",
+      "dist/app_dev/assets/js/lib-flexible-2.0/index.min.js",
+      "dist/app_dev/assets/js/mui.min.js",
+      "dist/app_dev/js/manifest.js",
+      "dist/app_dev/css/index.css",
+      "dist/app_dev/main.html",
+      "dist/app_dev/js/index.js",
+      "dist/app_dev/js/vendor.js",
+      "dist/app_dev/assets/css/mui.min.css",
+      "dist/app_dev/assets/images/ndt/home_bg@3x.png",
+      "dist/app_dev/assets/images/ndt/home_ill@3x.png",
+      "dist/app_dev/assets/images/ndt/home_icon_umbrella@3x.png",
+      "dist/app_dev/assets/images/ndt/home_icon_credit@3x.png",
+      "dist/app_dev/assets/images/ndt/home_icon_application@3x.png",
+      "dist/app_dev/assets/images/ndt/home_bg_calendar@3x.png",
+      "dist/app_dev/assets/images/ndt/bank_avatar.jpg"
+    ],
+    "refer": [
+      "dist/app_dev/main.html",
+      "dist/app_dev/products.html"
+    ]
+  },
+  "dist/app_dev/mainTab.html": {
+    "href": "dist/app_dev/mainTab.html",
+    "resources": [
+      "dist/app_dev/assets/js/lib-flexible-2.0/index.min.js",
+      "dist/app_dev/assets/css/mui.min.css",
+      "dist/app_dev/assets/css/icons-extra.css",
+      "dist/app_dev/css/mainTab.css",
+      "dist/app_dev/assets/js/mui.min.js",
+      "dist/app_dev/js/manifest.js",
+      "dist/app_dev/js/vendor.js",
+      "dist/app_dev/js/mainTab.js",
+      "dist/app_dev/assets/images/ndt/tab_btn_zx_sel@3x.png",
+      "dist/app_dev/assets/images/ndt/tab_btn_zx_nor@3x.png",
+      "dist/app_dev/assets/images/ndt/tab_btn_home_sel@3x.png",
+      "dist/app_dev/assets/images/ndt/tab_btn_search_nor@3x.png",
+      "dist/app_dev/assets/images/ndt/tab_btn_home_nor@3x.png",
+      "dist/app_dev/assets/images/ndt/tab_btn_search_sel@3x.png",
+      "dist/app_dev/assets/fonts/mui.ttf",
+      "dist/app_dev/index.html"
+    ],
+    "refer": [
+      "dist/app_dev/index.html"
+    ],
+    "priority": 0
+  },
+  "dist/app_dev/products.html": {
+    "resources": [
+      "dist/app_dev/css/products.css",
+      "dist/app_dev/js/products.js",
+      "dist/app_dev/assets/css/mui.min.css"
+    ]
+  }
+}

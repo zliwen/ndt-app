@@ -1,0 +1,37 @@
+<section id="applications">
+    <header class="mui-bar orange">
+        <span class="mui-action-back iconfont icon-back mui-pull-left"></span>
+        <h1 class="mui-title">申请记录</h1>
+        <button class="mui-btn mui-btn-link mui-pull-right mui-hidden">隐藏完成</button>
+    </header>
+    <section class="mui-content">
+        <net-status :reload="reload" :loading="loading" :no-data="!loading && !navList.length"></net-status>
+        <div id="slider" class="mui-slider" v-if="!loading && navList.length">
+            <div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                <a class="mui-control-item" :class="{'mui-active':index===current}" v-for="(item,index) in navList" :href="'#slider-'+item.id">{{item.value}}</a>
+            </div>
+            <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+            <div class="mui-slider-group">
+                <div :id="'slider-'+item.id" v-for="(item,index) in navList" :class="{'mui-active':index===current}" class="mui-slider-item mui-control-content">
+                    <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll" :id="'scroll-'+item.id">
+                            <ul class="mui-table-view">
+                                <li v-for="(subitem,subIndex) in item.list" class="mui-table-view-cell applicationItem" @tap.stop.prevent="showPage('applicationDetail',subitem,index,subIndex)">
+                                    <div class="avatar mui-hidden" :style="{backgroundImage:logo(subitem.logoImageUrl||subitem.orgSquareLogo)}"></div>
+                                    <div class="info">
+                                        <h3 class="title">{{subitem.productName}}</h3>
+                                        <span class="time">{{format(subitem.createAt,"yyyy-MM-dd hh:mm")}}</span>
+                                        <p class="sum">贷款金额：<span class="red">{{subitem.applyAmount}}{{getUnit(22,subitem.applyAmountUnit)}}</span></p>
+                                        <p class="month">贷款期限：{{subitem.applyTerm}}{{getUnit(23,subitem.applyTermUnit)}}</p>
+                                        <label :class="['s_'+(subitem.state || 1)]">{{getUnit(0,subitem.state)}}</label>
+                                    </div>
+                                </li>
+                            </ul>
+                            <net-status :reload="reload" :loading="item.loading" :no-data="!item.loading && !item.list.length"></net-status>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

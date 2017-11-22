@@ -1,0 +1,77 @@
+<section id="index">
+    <section class="header" id="indexHeader">
+        <header class="headerbg" style="background-image:url(assets/images/ndt/home_bg@3x.png)">
+            <div class="navBar mui-bar mui-bar-transparent">
+                <span class="iconfont icon-user mui-pull-left" @tap.stop.prevent="showUser"></span>
+                <h3 class="mui-title">成都农贷通</h3>
+                <span class="iconfont icon-msg mui-pull-right mui-hidden"></span>
+            </div>
+            <div class="banner">
+                <div class="slogan">
+                    <h2>农贷通</h2>
+                    <p>政策扶持，服务三农</p>
+                    <div class="sloginImg" style="background-image:url(assets/images/ndt/home_ill@3x.png)"></div>
+                </div>
+                <div class="enter" @tap.stop.prevent="showPage('financialProducts')">立即申请贷款</div>
+            </div>
+        </header>
+        <nav class="quikNav">
+            <ul class="navList">
+                <li class="navItem" v-for="item in navList" @tap.stop.prevent="openPage(item.id)">
+                    <img :src="item.icon" alt="item.txt">
+                    <span class="name">{{item.txt}}</span>
+                    <p class="desc">{{item.desc}}</p>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <section class="news">
+        <div class="calendar" style="background-image:url(assets/images/ndt/home_bg_calendar@3x.png)">
+            <span class="month">{{format(today,"M")}} 月</span>
+            <span class="date">{{format(today,"d")}}</span>
+        </div>
+        <div class="newInfo" v-if="news.length">
+            <div class="itemWrap" :style="{'transform':'translate3d(0, '+scrollTop+'rem, 0)','transition':(scrollTop===0)?'transform 0s':'transform .5s'}">
+                <div class="item" v-for="item in news" @tap.stop.prevent="showNews('newDetail',item,'policy')">
+                    <h3 class="ellipsis">{{item.title || '农贷通新一轮政策扶植出台'}}</h3>
+                    <div class="p ellipsis" v-html="item.summary || '农贷通新一轮政策扶植出台，农贷通新一… '"></div>
+                </div>
+                <div class="item" v-for="item in news" @tap.stop.prevent="showNews('newDetail',item,'policy')">
+                    <h3 class="ellipsis">{{item.title || '农贷通新一轮政策扶植出台'}}</h3>
+                    <div class="p ellipsis" v-html="item.summary || '农贷通新一轮政策扶植出台，农贷通新一… '"></div>
+                </div>
+            </div>
+        </div>
+        <div class="newInfo" v-else>
+            <h3 class="ellipsis">{{'农贷通新一轮政策扶植出台'}}</h3>
+            <div class="p ellipsis">{{'农贷通新一轮政策扶植出台，农贷通新一… '}}</div>
+        </div>
+    </section>
+    <section class="productsList">
+        <header class="proTitle">
+            <h3>农贷通精选</h3>
+            <i class="iconfont icon-more" @tap.stop.prevent="showPage('financialProducts')"></i>
+        </header>
+        <net-status :reload="reload" :loading="loading" :no-data="!loading && !list.length"></net-status>
+        <ul class="proWrap" v-if="!loading && list.length">
+            <li class="proItem" v-for="item in list" @tap.stop.prevent="showPage('productDetail',item.id)">
+                <div class="productInfo">
+                    <div class="avatar mui-hidden" :style="{backgroundImage:logo(item.orgLogoImageUrl || '')}">
+                    </div>
+                    <div class="bank">
+                        <h3 class="title">{{item.name}}</h3>
+                        <div class="name ellipsis">{{item.orgName}}</div>
+                    </div>
+                    <div class="desc">
+                        <p v-if="item.loanTypesValue && item.loanTypesValue.length">贷款方式：<span class="red">{{item.loanTypesValue.join("，")}}</span></p>
+                        <p v-if="item.productToValue && item.productToValue.length">贷款对象：{{item.productToValue.join("，")}}</p>
+                        <p v-if="item.productToValue && item.divisionsValue.length">所属区域：{{item.divisionsValue.join("，")}}</p>
+                    </div>
+                    <div class="labels" v-if="item.labelNames && item.labelNames.length">
+                        <label v-for="label in item.labelNames">{{label}}</label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+</section>

@@ -1,0 +1,33 @@
+<section class="filterPage">
+    <div class="filterItem">
+        <h3>贷款对象</h3>
+        <div class="itemWrap">
+            <div class="item" :class="{active: params.productTo.indexOf(item.id)>=0}" v-for="item in productTo" @tap="handelProductTo('productTo',item.id)">{{item.value}}</div>
+        </div>
+    </div>
+    <div class="filterItem">
+        <h3>特色产品</h3>
+        <div class="itemWrap">
+            <div class="item" :class="{active: params.onlyNdt===item.value}" v-for="item in onlyNdt" @tap="handleOnlyNdt(item.value)">{{item.name}}</div>
+        </div>
+    </div>
+    <div class="filterItem">
+        <h3>贷款方式</h3>
+        <div class="itemWrap">
+            <div class="item" :class="{active: params.loanTypes.indexOf(item.id)>=0}" v-for="item in loanTypes" @tap="handelProductTo('loanTypes',item.id)">{{item.value}}</div>
+        </div>
+    </div>
+    <div class="filterItem">
+        <h3>最高金额</h3>
+        <div class="itemWrap">
+            <div class="item" :class="{active: index===loanAmountIndex}" v-for="(item,index) in loanAmount" @tap="handelLoanAmount(item.value,index)">{{item.name}}</div>
+        </div>
+        <!-- <div class="itemWrap">
+            <input type="number" class="maxSum" placeholder="请输入金额"> <span class="sum">万元</span>
+        </div> -->
+    </div>
+    <div class="btnGroup">
+        <div class="btn white" @tap="resetData">重置</div>
+        <div class="btn block" @tap="getData">确定</div>
+    </div>
+</section>

@@ -1,0 +1,9 @@
+<div class="netStatus">
+    <div class="loadStatus" :class="{loading: loading===true}"><span class="mui-spinner"></span></div>
+    <div class="loadStatus" :class="{noData: noData}"></div>
+    <div class="loadingStatus" v-if="loading === 'fail'">
+        <div class="statusImage" :style="{backgroundImage:'url(assets/images/ndt/WiFi@3x.png)'}"></div>
+        <p class="statusDesc">加载失败, 请检查网络</p>
+        <div class="statusBtn" @tap="reload">刷新重试</div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<section class="login">
+    <header class="mui-bar orange white">
+        <span class="mui-action-back iconfont icon-back mui-pull-left"></span>
+        <h1 class="mui-title">手机认证</h1>
+    </header>
+    <section class="mui-content">
+        <form class="loginForm">
+            <div class="item">
+                <input type="tel" name="" id="phone" v-model="phone" placeholder="请输入需要认证的手机号">
+            </div>
+            <div class="item">
+                <input type="password" name="" id="password" v-model="password" @blur.stop.prevent="oldBlur" placeholder="请输入登录密码">
+            </div>
+            <div class="item verifyCode">
+                <input type="tel" name="" id="validateId" v-model="validateId" placeholder="请输入验证码">
+                <a href="javascript:;" id="vallidateBtn" class="verifyBtn btn white" @tap.stop.prevent="getValidateId">获取验证码</a>
+            </div>
+            <a href="javascript:;" @tap.stop.prevent="toAuth" class="registerBtn btn block">完成</a>
+        </form>
+    </section>
+</section>

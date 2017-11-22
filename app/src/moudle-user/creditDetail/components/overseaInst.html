@@ -1,0 +1,12 @@
+<section class="overseaInst">
+    <div class="tableCont">
+        <table class="table">
+            <tr>
+                <th v-for="item in detail.header">{{item.title||" "}}</th>
+            </tr>
+            <tr v-for="item in detail.result">
+                <td v-for="title in detail.header">{{item[title.dataIndex] || " "}}</td>
+            </tr>
+        </table>
+    </div>
+</section>
